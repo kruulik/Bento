@@ -18,7 +18,13 @@ following criteria with smooth, bug-free navigation, adequate seed data and suff
 - [ ] Comments
 
 ## Design Docs
-[wireframes]: ./wireframes
+* [View Wireframes][wireframes]
+* [React Components][components]
+* [API endpoints][api-endpoints]
+* [DB schema][schema]
+* [Sample State][sample-state]
+
+[wireframes]: wireframes
 [components]: component-hierarchy.md
 [sample-state]: sample-state.md
 [api-endpoints]: api-endpoints.md
