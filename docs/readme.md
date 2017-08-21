@@ -25,7 +25,7 @@ following criteria with smooth, bug-free navigation, adequate seed data and suff
 * [Sample State][sample-state]
 
 [wireframes]: wireframes
-[components]: component-hierarchy.md
+[components]: components.md
 [sample-state]: sample-state.md
 [api-endpoints]: api-endpoints.md
 [schema]: schema.md  
@@ -52,5 +52,5 @@ following criteria with smooth, bug-free navigation, adequate seed data and suff
 ### Bonus Features (TBD)
 - [ ] Tags
 - [ ] Follows
-- [ ] Appreciations *join tables to display total count on User Profiles.*
-- [ ] Views *join tables to display total count on User Profiles.*
+- [ ] Appreciations (*join tables to display total count on User Profiles.*)
+- [ ] Views (*join tables to display total count on User Profiles.*)
