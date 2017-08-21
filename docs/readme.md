@@ -28,7 +28,7 @@ following criteria with smooth, bug-free navigation, adequate seed data and suff
 [components]: component-hierarchy.md
 [sample-state]: sample-state.md
 [api-endpoints]: api-endpoints.md
-[schema]: schema.md
+[schema]: schema.md  
 
 
 ## Implementation Timeline
