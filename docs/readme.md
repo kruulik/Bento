@@ -17,6 +17,7 @@ following criteria with smooth, bug-free navigation, adequate seed data and suff
 - [ ] Likes
 - [ ] Comments
 
+## Design Docs
 [wireframes]: ./wireframes
 [components]: component-hierarchy.md
 [sample-state]: sample-state.md
