@@ -37,19 +37,20 @@ following criteria with smooth, bug-free navigation, adequate seed data and suff
 
 **Objective:** Functioning rails project with front-end Authentication
 
-### Phase 3: Projects Model, API, and components (3 days)
+### Phase 3: Projects Model, API, and components (4 days)
 
-**Objective:** Projects can be created, viewed, edited and destroyed through the API.
+**Objective:** Projects can be created, viewed, edited and destroyed through the API. *Should split this up into Project Modal & Projects Gallery, as they are the main components of this app.*
 
-### Phase 2: Comments Model, API, and Components (2 days)
+### Phase 1: Comments Model, API, and Components (2 days)
 
-**Objective:** Users can create comments and like projects.
+**Objective:** Users can create comments and like projects. *delegating less time to this because it makes up a minor portion of the UX. Focus should be on Likes/Appreciations.*
 
-### Phase 4: User Profiles (2 day)
+### Phase 4: User Profiles (2 days)
 
 **Objective:** Each user has a profile showcasing their projects.
 
-### Bonus Features (Time Permitting)
+### Bonus Features (TBD)
 - [ ] Tags
 - [ ] Follows
-- [ ] Views
+- [ ] Appreciations *join tables to display total count on User Profiles.*
+- [ ] Views *join tables to display total count on User Profiles.*
