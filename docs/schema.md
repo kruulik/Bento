@@ -5,7 +5,8 @@
 column name     | data type | details
 --------------- | --------- | -------------------------
 id              | integer   | not null, primary key
-username        | string    | not null, indexed, unique
+f_name          | string    | not null, indexed, unique
+l_name          | string    | not null, indexed, unique
 email           | string    | not null, unique
 password_digest | string    | not null
 session_token   | string    | not null, indexed, unique
@@ -15,7 +16,7 @@ bio             | string    |
 ## Projects
 
 column name   | data type | details
-------------- | --------- | -------------------------------------------------
+------------- | --------- | ------------------------------
 id            | integer   | not null, primary key
 user_id       | integer   | not null, foreign key, indexed
 title         | string    | not null
@@ -25,16 +26,15 @@ thumbnail_url | string    | not null
 ## Images
 
 column name | data type | details
------------ | --------- | ----------------------------------------------------
+----------- | --------- | ------------------------------
 id          | integer   | not null, primary key
-img_url     | string    | not null
 caption     | string    |
 project_id  | integer   | not null, foreign key, indexed
 
 ## Likes
 
 column name | data type | details
------------ | --------- | ----------------------------------------------------
+----------- | --------- | ---------------------
 user_id     | integer   | not null, foreign key
 project_id  | integer   | not null, foreign key
 
@@ -45,4 +45,4 @@ column name | data type | details
 id          | integer   | not null, primary key
 user_id     | integer   | not null
 project_id  | integer   | not null
-body        | text    | not null
+body        | text      | not null
