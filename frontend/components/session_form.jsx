@@ -43,7 +43,6 @@ class SessionForm extends React.Component {
       <input type="text" id="l_name" value={this.state.l_name} onChange={this.update('l_name')}/>
       ]
     );
-    // debugger
     return (
       <div>
         <h3>{header}</h3>

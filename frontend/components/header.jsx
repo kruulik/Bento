@@ -7,7 +7,6 @@ class Header extends React.Component {
 
 
   render() {
-    debugger
     const logo = (
       <Link to="/" className="header-link"><h1>Bentö</h1></Link>
     );
