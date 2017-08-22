@@ -5,8 +5,8 @@
 column name     | data type | details
 --------------- | --------- | -------------------------
 id              | integer   | not null, primary key
-f_name          | string    | not null, indexed, unique
-l_name          | string    | not null, indexed, unique
+f_name          | string    | not null
+l_name          | string    | not null
 email           | string    | not null, unique
 password_digest | string    | not null
 session_token   | string    | not null, indexed, unique
