@@ -10,8 +10,8 @@ Bentö is a web-app clone of the popular design and artwork showcase platform Be
 By the end of Week 9, this app will, at a minimum, satisfy the
 following criteria with smooth, bug-free navigation, adequate seed data and sufficient CSS styling:
 
-- [ ] Hosting on Heroku
-- [ ] New account creation, login, and guest/demo login
+- [X] Hosting on Heroku
+- [X] New account creation, login, and guest/demo login
 - [ ] Portfolio Viewing
 - [ ] Explore Portfolios
 - [ ] Likes
