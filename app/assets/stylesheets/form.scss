@@ -34,7 +34,10 @@ fieldset+fieldset {
   width: 412px;
   margin: auto;
   position: relative;
-  top: 100px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .grid {
