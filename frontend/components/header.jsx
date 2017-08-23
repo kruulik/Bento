@@ -14,17 +14,20 @@ class Header extends React.Component {
     let sessionAction;
 
     if (this.props.currentUser) {
-      sessionAction = ([< div className = "session-actions" > <h2>Welcome {this.props.currentUser.f_name}</h2> < button onClick = {
-          this.props.logout
-        } > Log Out < /button>
-        </div >]);
+      sessionAction = ([
+        <div className = "session-actions">
+          <h2>Welcome {this.props.currentUser.f_name}</h2>
+            
+            <button onClick = {this.props.logout}>Log Out</button>
+        </div>
+      ]);
     } else {
       sessionAction = ([< div className = "session-actions" >
       <div className="button__container menu-item">
         <Link className="form-button" to="/signup">
           <span className="button__label">Sign Up With Email</span>
         </Link>
-      </div> 
+      </div>
       <Link className="link menu-item" to = "/login" > Log In </Link>
         </div >
       ]);

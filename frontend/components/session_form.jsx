@@ -5,6 +5,10 @@ import { withRouter, Link } from 'react-router-dom';
 
 class SessionForm extends React.Component {
 
+
+
+
+
   constructor(props) {
     super(props);
     this.state = {
@@ -14,6 +18,10 @@ class SessionForm extends React.Component {
       password: ""
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  componentDidMount(){
+    this.props.clearErrors();
   }
 
   handleSubmit(e) {
@@ -47,6 +55,7 @@ class SessionForm extends React.Component {
     if (this.props.errors.responseJSON) {
     errors = this.props.errors.responseJSON.map((err) => <li>{err}</li>);
     }
+
     const fields = (
       [
       <fieldset className="names">
