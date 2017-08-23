@@ -5,10 +5,6 @@ import { withRouter, Link } from 'react-router-dom';
 
 class SessionForm extends React.Component {
 
-
-
-
-
   constructor(props) {
     super(props);
     this.state = {
@@ -18,6 +14,7 @@ class SessionForm extends React.Component {
       password: ""
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.guestLogin = this.guestLogin.bind(this);
   }
 
   componentDidMount(){
@@ -36,6 +33,12 @@ class SessionForm extends React.Component {
 
   update(field) {
     return (e) => this.setState({[field]: e.currentTarget.value});
+  }
+
+  guestLogin(e) {
+    e.preventDefault();
+    const user = {email: 'karoliskrulis@gmail.com', password: 'password'};
+    this.props.login(user);
   }
 
   render() {
@@ -103,6 +106,9 @@ class SessionForm extends React.Component {
 
           <div className="row">
             {back}
+          </div>
+          <div className="row">
+            <span className="demo" onClick={this.guestLogin}>Demo Login</span>
           </div>
 
 
