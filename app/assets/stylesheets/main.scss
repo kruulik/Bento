@@ -1,5 +1,29 @@
+html {
+  color: #4b4b4b;
+}
+
 body {
   background: #f9f9f9;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+h1 {
+  display: block;
+  font-weight: bold;
+  color: inherit;
+}
+
+a {
+  color: #0064dc;
+}
+
+.page-action {
+  // this works for h1 in form
+  color: #4b4b4b;
+  font-size: 13px;
+  line-height: 1;
+  font-weight: bold;
 }
 
 .site-content {
@@ -18,13 +42,18 @@ body {
   border-radius: 50px;
   box-sizing: border-box;
   font-size: 14px;
-  color: #fff;
+  // color: #fff;
   padding: 6px 15px 7px;
   line-height: 1.25;
-  font-weight: 400;
+  // font-weight: 400;
   transition-duration: 300ms;
   transition-property: background, color;
   transition-timing-function: linear;
+}
+
+.form-button {
+  color: #fff;
+  font-weight: 600;
 }
 
 .button__container:hover {

@@ -13,8 +13,10 @@ span, article, footer, time, small {
   text-align: inherit;
   text-decoration: inherit;
   vertical-align: inherit;
-  box-sizing: inherit;
+  box-sizing: border-box;
   background: transparent;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.428571;
 }
 
 ul {
