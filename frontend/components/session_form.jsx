@@ -31,7 +31,7 @@ class SessionForm extends React.Component {
   }
 
   render() {
-    // const header = this.props.formType;
+
     let header, back, button, errors;
 
     if (this.props.formType === 'signup') {
@@ -44,12 +44,9 @@ class SessionForm extends React.Component {
       button = 'Sign In';
     }
 
-    // const errors = this.props.errors.responseJSON;
-    // debugger
     if (this.props.errors.responseJSON) {
     errors = this.props.errors.responseJSON.map((err) => <li>{err}</li>);
     }
-    // debugger
     const fields = (
       [
       <fieldset className="names">
