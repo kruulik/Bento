@@ -2,37 +2,38 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 // import SessionFormContainer from './session_form_container';
 
-
 class Header extends React.Component {
-
 
   render() {
     const logo = (
-      <Link to="/" className="header-link"><h1>Bentö</h1></Link>
+      <Link to="/" className="nav-logo">
+        <h1>Bentö</h1>
+      </Link>
     );
 
     let sessionAction;
 
     if (this.props.currentUser) {
-      sessionAction = ([
-        <div className="profile-actions">
-          <h2>Welcome {this.props.currentUser.f_name}</h2>
-          <button onClick={this.props.logout}>Log Out</button>
-        </div>
-      ]);
+      sessionAction = ([< div className = "session-actions" > <h2>Welcome {this.props.currentUser.f_name}</h2> < button onClick = {
+          this.props.logout
+        } > Log Out < /button>
+        </div >]);
     } else {
-      sessionAction = ([
-        <div className="profile-actions">
-          <Link to="/signup">Sign Up</Link>
-          <Link to="/login">Log In</Link>
-        </div>
+      sessionAction = ([< div className = "session-actions" >
+      <div className="button__container menu-item">
+        <Link className="form-button" to="/signup">
+          <span className="button__label">Sign Up With Email</span>
+        </Link>
+      </div> 
+      <Link className="link menu-item" to = "/login" > Log In </Link>
+        </div >
       ]);
     }
 
     return (
-      <nav>
-        { logo }
-        { sessionAction }
+      <nav className="primary-nav">
+        {logo}
+        {sessionAction}
       </nav>
     );
 

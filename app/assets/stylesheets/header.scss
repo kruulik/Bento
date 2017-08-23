@@ -1,0 +1,46 @@
+.primary-nav {
+  height: 60px;
+  background: #191919;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  align-items: center;
+}
+
+.link {
+  color: #a4a4a4;
+  font-weight: bold;
+  font-size: 15px;
+  transition-duration: .1s;
+  transition-property: color;
+  transition-timing-function: linear;
+}
+
+.link:hover {
+  color: #fff;
+}
+
+.link.active {
+  color: #fff;
+}
+
+.nav-logo {
+  color: white;
+  font-weight: 500;
+  font-size: 32px;
+  margin-right: 30px;
+  margin-left: 30px;
+}
+
+.menu-item {
+  margin: 0 10px;
+}
+
+.session-actions {
+  margin-right: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
