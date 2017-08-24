@@ -28,7 +28,10 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 gem 'jquery-rails'
-gem "paperclip", "~> 5.0.0"
+
+gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
+gem 'figaro'
+gem 'aws-sdk', '>= 2.0'
 # gem 'compass-rails', '~> 1.1.7'
 # gem 'sass-rails'
 # Use Capistrano for deployment

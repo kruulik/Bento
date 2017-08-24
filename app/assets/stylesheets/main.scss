@@ -59,3 +59,14 @@ a {
 .button__container:hover {
   background: #003ecb;
 }
+
+.avatar.thumb-small {
+  padding: 15px 0;
+  position: relative;
+  border-radius: 50%;
+  box-sizing: content-box;
+  height: 30px;
+  min-height: 30px;
+  min-width: 30px;
+  width: 30px;
+}

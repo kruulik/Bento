@@ -56,7 +56,7 @@ class SessionForm extends React.Component {
     }
 
     if (this.props.errors.responseJSON) {
-    errors = this.props.errors.responseJSON.map((err) => <li>{err}</li>);
+    errors = this.props.errors.responseJSON.map((err, idx) => <li key={idx}>{err}</li>);
     }
 
     const fields = (

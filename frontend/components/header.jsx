@@ -16,8 +16,8 @@ class Header extends React.Component {
     if (this.props.currentUser) {
       sessionAction = ([
         <div className = "session-actions">
-          <h2>Welcome {this.props.currentUser.f_name}</h2>
-            
+          <h2>{this.props.currentUser.f_name}</h2>
+            <img className="avatar thumb-small" src={this.props.currentUser.avatar_url} />
             <button onClick = {this.props.logout}>Log Out</button>
         </div>
       ]);
