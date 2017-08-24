@@ -1,6 +1,6 @@
 import {
   RECEIVE_PROJECTS
-} from '../acitons/project_action';
+} from '../actions/project_actions';
 import {
   merge
 } from 'lodash';
@@ -10,10 +10,10 @@ const ProjectsReducer = (state = {}, action) => {
 
   switch (action.type) {
     case RECEIVE_PROJECTS:
-      return {
-        projects: action.projects
-      };
+      return merge({}, state, action.projects);
     default:
       return state;
   }
 };
+
+export default ProjectsReducer;

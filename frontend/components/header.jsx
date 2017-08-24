@@ -22,15 +22,16 @@ class Header extends React.Component {
         </div>
       ]);
     } else {
-      sessionAction = ([< div className = "session-actions" >
-      <div className="button__container menu-item">
-        <Link className="form-button" to="/signup">
-          <span className="button__label">Sign Up With Email</span>
-        </Link>
+      sessionAction = (
+      <div className="session-actions">
+        <div className="button__container menu-item">
+          <Link className="form-button" to="/signup">
+            <span className="button__label">Sign Up With Email</span>
+          </Link>
+        </div>
+        <Link className="link menu-item" to="/login"> Log In </Link>
       </div>
-      <Link className="link menu-item" to = "/login" > Log In </Link>
-        </div >
-      ]);
+      );
     }
 
     return (

@@ -2,13 +2,15 @@ import * as APIUtil from '../util/project_api_util';
 
 export const RECEIVE_PROJECTS = 'RECEIVE_PROJECTS';
 
-export const receiveProjects = req => ({
+export const receiveProjects = ({ projects, owners }) => ({
   type: RECEIVE_PROJECTS,
-  projects
+  projects,
+  owners 
 });
 
-export const requestProjects = () => {
-  return APIUtil.fetchProjects().then(
-    data => dispatch(receiveProjects(data))
+export const requestProjects = dispatch => {
+  debugger
+  return APIUtil.requestProjects()
+  .then(projects => dispatch(receiveProjects(projects))
   );
 };
