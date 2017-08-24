@@ -3,7 +3,7 @@ class Api::ProjectsController < ApplicationController
 
   def create
     @project = Project.new(project_params)
-    @project.owner = current_user.id
+    @project.owners = current_user.id
 
     if @project.save
       render :show, status: 201
