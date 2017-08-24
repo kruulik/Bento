@@ -20,8 +20,15 @@ column name   | data type | details
 id            | integer   | not null, primary key
 user_id       | integer   | not null, foreign key, indexed
 title         | string    | not null
-description   | string    |
 thumbnail_url | string    | not null
+
+## Items
+
+column name | data type | details
+----------- | --------- | ------------------------------
+id          | integer   | not null, primary key
+project_id  | integer   | not null, foreign key, indexed
+body        | text      |
 
 ## Images
 
