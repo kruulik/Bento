@@ -1,18 +1,17 @@
 # == Schema Information
 #
-# Table name: items
+# Table name: ownerships
 #
 #  id         :integer          not null, primary key
+#  user_id    :integer          not null
 #  project_id :integer          not null
-#  body       :text
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 
-require 'test_helper'
+class Ownership < ApplicationRecord
 
-class ItemTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  belongs_to :user
+  belongs_to :project_id
+
 end
