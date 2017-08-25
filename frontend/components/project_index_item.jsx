@@ -11,7 +11,15 @@ class ProjectIndexItem extends React.Component {
     if ( projectOwners.length > 1 ) {
       ownerList = projectOwners.map((owner, idx) => {
         // debugger
-        return (<div key={idx} className="owner">{owner.f_name} {owner.l_name}</div>);
+        return (
+        <div key={idx} className="owner">
+          <span className="owner-image-container">
+            <img src="" className="owner-image"/>
+          </span>
+          <span className="owner-name">
+            {owner.f_name + " " +  owner.l_name}
+          </span>
+        </div>);
       });
       owners = (
         <div className="owners" >
@@ -25,9 +33,9 @@ class ProjectIndexItem extends React.Component {
         </div>
       );
     } else {
-      owners = <span className="single-owner">
-        {projectOwners[0].f_name} {projectOwners[0].l_name}
-      </span>;
+      owners = <div className="owners">
+        {projectOwners[0].f_name + " " + projectOwners[0].l_name}
+      </div>;
     }
 
 

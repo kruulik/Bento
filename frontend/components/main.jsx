@@ -6,18 +6,20 @@ import DiscoverContainer from './discover_container';
 class Main extends React.Component {
 
   render() {
-    let topPanel;
+  let topPanel;
 
-    topPanel = ( <HeaderContainer /> );
-    // debugger
-    return (
-      <div>
-        <div className="topPanel">{ topPanel }</div>
-        <div className="site-content">
-          <Route path="/discover" exact component={DiscoverContainer} />
-        </div>
+  topPanel = ( <HeaderContainer /> );
+  // debugger
+  return (
+    <div>
+      <div className="topPanel">{ topPanel }</div>
+      <div className="site-content">
+        <Switch>
+          <Route path="/" exact component={DiscoverContainer} />
+        </Switch>
       </div>
-    );
+    </div>
+  );
 
   }
 
