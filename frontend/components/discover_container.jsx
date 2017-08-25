@@ -3,7 +3,6 @@ import { logout } from '../actions/session_actions';
 import Discover from './discover';
 
 const mapStateToProps = ({ session }) => {
-  // debugger
   return {
     currentUser: session.currentUser,
   };

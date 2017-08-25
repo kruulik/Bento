@@ -5,7 +5,6 @@ import ProjectsIndexContainer from './projects_index_container';
 class Discover extends React.Component {
 
   render () {
-    // debugger
     return (
       <div className="discover-container">
         <ProjectsIndexContainer />

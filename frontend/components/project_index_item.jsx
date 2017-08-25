@@ -1,8 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Modal from 'react-modal';
+import modalStyle from './modal_style.js';
 
 
 class ProjectIndexItem extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+     modalOpen: false
+   };
+  }
 
   render () {
     const { projectOwners } = this.props;
@@ -10,7 +19,7 @@ class ProjectIndexItem extends React.Component {
 
     if ( projectOwners.length > 1 ) {
       ownerList = projectOwners.map((owner, idx) => {
-        
+
         return (
         <div key={idx} className="owner">
           <span className="owner-image-container">
@@ -38,17 +47,32 @@ class ProjectIndexItem extends React.Component {
       </div>;
     }
 
-
-
-
     return (
-      <div className="project-card">
-        <div className="thumb"></div>
-        <div className="details">
-          <Link to="#" className="title">{this.props.project.title} </Link>
-          {owners}
+      <div>
+
+        <div className="project-card">
+          <div className="thumb"></div>
+          <div className="details">
+            <Link to='#' className="title">{this.props.project.title} </Link>
+            {owners}
+          </div>
         </div>
+
+        <Modal
+          isOpen={this.state.modalOpen}
+          onAfterOpen={this.afterModalOpen}
+          onRequestClose={this.closeModal}
+          style = {style}
+          contentLabel="Board Modal">
+          <div className="x-button">
+            <button onClick={this.closeModal}><i aria-hidden="true"></i>
+            </button>
+          </div>
+        </Modal>
+
       </div>
+
+
     );
   }
 }

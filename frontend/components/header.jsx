@@ -30,6 +30,7 @@ class Header extends React.Component {
           </Link>
         </div>
         <Link className="link menu-item" to="/login"> Log In </Link>
+        <Link className="link menu-item github" to="https://github.com/kruulik/Bento"> GitHub </Link>
       </div>
       );
     }
