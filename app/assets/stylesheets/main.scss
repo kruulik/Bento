@@ -71,6 +71,23 @@ a {
   width: 30px;
 }
 
-.main-container {
-  // top: 60px;
+.tooltip {
+  border-radius: 3px;
+  box-shadow: 0 2px 8px rgba(25,25,25,0.3);
+  transition: visibility 0s linear .25s, opacity .25s linear;
+  visibility: hidden;
+  padding: 10px;
+}
+
+.tooltip .owner {
+  height: 20px;
+  margin-bottom: 5px;
+}
+
+.tooltip .owner:last-child{
+  margin-bottom: none;
+}
+
+.owners:hover .tooltip {
+  visibility: visible;
 }

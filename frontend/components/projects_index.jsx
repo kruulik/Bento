@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import ProjectIndexItem from './project_index_item';
+// import ProjectIndexItem from './project_index_item';
+import ProjectIndexItemContainer from './project_index_item_container';
 
 class ProjectsIndex extends React.Component {
 
@@ -9,12 +10,12 @@ class ProjectsIndex extends React.Component {
   }
 
   render () {
-    // debugger
     const { allProjects } = this.props;
+
 
     return (
       <div className="projects-grid">
-        { allProjects.map(project => <ProjectIndexItem key={project.id} project={ project }/>) }
+        { allProjects.map(project => <ProjectIndexItemContainer key={project.id} project={ project }/>) }
       </div>
     );
   }

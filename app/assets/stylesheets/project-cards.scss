@@ -32,4 +32,9 @@
   height: 36px;
   margin-bottom: 9px;
   overflow: hidden;
+  display: block;
+}
+
+.project-card a {
+  color: inherit !important;
 }

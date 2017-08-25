@@ -8,18 +8,12 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack --watch"
+    "postinstall": "webpack"
   },
-
   "engines": {
     "node": "6.10.1",
     "npm": "3.10.10"
   },
-  "scripts": {
-    "postinstall": "webpack"
-  },
-
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kruulik/Bento.git"
@@ -40,6 +34,7 @@
     "react-dom": "^15.6.1",
     "react-redux": "^5.0.6",
     "react-router-dom": "^4.1.2",
+    "react-scroll": "^1.5.4",
     "redux": "^3.7.2",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.2.0",

@@ -10,7 +10,7 @@ const UsersReducer = (state = {}, action) => {
 
   switch (action.type) {
     case RECEIVE_PROJECTS:
-      return merge({}, state, action.users);
+      return merge({}, state, action.owners);
     default:
       return state;
   }

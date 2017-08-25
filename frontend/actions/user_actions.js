@@ -9,14 +9,7 @@ export const receiveProjects = ({ projects, owners }) => ({
 });
 
 export const requestProjects = dispatch => {
-  // debugger
   return APIUtil.requestProjects()
   .then(projects => dispatch(receiveProjects(projects))
-  );
-};
-
-export const requestUserProjects = id => dispatch => {
-  APIUtil.fetchUserProjects(id)
-  .then(data => dispatch(receiveProjects(data))
   );
 };

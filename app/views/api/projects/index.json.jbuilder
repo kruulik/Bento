@@ -10,7 +10,7 @@ json.owners do
   @projects.each do |project|
     project.owners.each do |owner|
       json.set! owner.id do
-        json.extract! owner, :id, :f_name
+        json.extract! owner, :id, :f_name, :l_name
       end
     end
   end

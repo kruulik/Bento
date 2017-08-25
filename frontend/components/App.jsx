@@ -4,6 +4,7 @@ import MainContainer from './main_container';
 import SessionFormContainer from './session_form_container';
 import { Switch, Route, Link } from 'react-router-dom';
 import { AuthRoute } from '../util/route_util';
+// import Scroll from 'react-scroll';
 
 const App = () => {
   // debugger
@@ -14,7 +15,7 @@ const App = () => {
       <AuthRoute path="/signup" component={SessionFormContainer} />
       <Route path="/" component={MainContainer} />
     </Switch>
-  
+
 );
 };
 

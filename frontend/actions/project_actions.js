@@ -9,14 +9,22 @@ export const receiveProjects = ({ projects, owners }) => ({
 });
 
 export const requestProjects = dispatch => {
-  // debugger
   return APIUtil.requestProjects()
-  .then(projects => dispatch(receiveProjects(projects))
+  .then(projects => {
+    
+    dispatch(receiveProjects(projects));
+  }
   );
 };
 
 export const requestUserProjects = id => dispatch => {
-  APIUtil.fetchUserProjects(id)
-  .then(data => dispatch(receiveProjects(data))
+  APIUtil.requestUserProjects(id)
+  .then(projects => dispatch(receiveProjects(projects))
+  );
+};
+
+export const requestOwners = ids => dispatch => {
+  APIUtil.requestOwners(ids)
+  .then(data => dispatch(requestOwners(data))
   );
 };
