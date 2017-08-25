@@ -1,10 +1,9 @@
 import React from 'react';
-import {Route, Link} from 'react-router-dom';
+import {Switch, Route, Link} from 'react-router-dom';
 import HeaderContainer from './header_container';
-import ActivityContainer from './activity_container';
+import DiscoverContainer from './discover_container';
 
 class Main extends React.Component {
-
 
   render() {
     let topPanel;
@@ -12,9 +11,11 @@ class Main extends React.Component {
     topPanel = ( <HeaderContainer /> );
     // debugger
     return (
-      <div className="main-container">
+      <div>
         <div className="topPanel">{ topPanel }</div>
-        <Route path="/activity" exact component={ActivityContainer} />
+        <div className="site-content">
+          <Route path="/discover" exact component={DiscoverContainer} />
+        </div>
       </div>
     );
 

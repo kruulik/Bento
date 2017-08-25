@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { logout } from '../actions/session_actions';
-import Activity from './activity';
+import Discover from './discover';
 
 const mapStateToProps = ({ session }) => {
   // debugger
@@ -10,4 +10,4 @@ const mapStateToProps = ({ session }) => {
 };
 
 
-export default connect(mapStateToProps)(Activity);
+export default connect(mapStateToProps)(Discover);

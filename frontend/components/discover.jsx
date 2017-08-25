@@ -2,16 +2,16 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import ProjectsIndexContainer from './projects_index_container';
 
-class Activity extends React.Component {
+class Discover extends React.Component {
 
   render () {
     // debugger
     return (
-      <div className="activity-container">
+      <div className="discover-container">
         <ProjectsIndexContainer />
       </div>
     );
   }
 }
 
-export default Activity;
+export default Discover;

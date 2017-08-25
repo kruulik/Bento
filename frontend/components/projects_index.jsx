@@ -9,7 +9,7 @@ class ProjectsIndex extends React.Component {
   }
 
   render () {
-    debugger
+    // debugger
     const { allProjects } = this.props;
 
     return (

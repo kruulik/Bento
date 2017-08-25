@@ -5,11 +5,11 @@ export const RECEIVE_PROJECTS = 'RECEIVE_PROJECTS';
 export const receiveProjects = ({ projects, owners }) => ({
   type: RECEIVE_PROJECTS,
   projects,
-  owners 
+  owners
 });
 
 export const requestProjects = dispatch => {
-  debugger
+  // debugger
   return APIUtil.requestProjects()
   .then(projects => dispatch(receiveProjects(projects))
   );

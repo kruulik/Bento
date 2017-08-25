@@ -7,13 +7,15 @@ import { AuthRoute } from '../util/route_util';
 
 const App = () => {
   // debugger
-  return (<div>
+  return (
+
     <Switch>
       <AuthRoute path="/login" component={SessionFormContainer} />
       <AuthRoute path="/signup" component={SessionFormContainer} />
       <Route path="/" component={MainContainer} />
     </Switch>
-  </div>);
+  
+);
 };
 
 export default App;
