@@ -10,7 +10,7 @@ class ProjectIndexItem extends React.Component {
 
     if ( projectOwners.length > 1 ) {
       ownerList = projectOwners.map((owner, idx) => {
-        // debugger
+        
         return (
         <div key={idx} className="owner">
           <span className="owner-image-container">

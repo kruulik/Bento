@@ -9,7 +9,7 @@ class Main extends React.Component {
   let topPanel;
 
   topPanel = ( <HeaderContainer /> );
-  // debugger
+  
   return (
     <div>
       <div className="topPanel">{ topPanel }</div>

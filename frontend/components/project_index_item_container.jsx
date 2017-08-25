@@ -9,7 +9,7 @@ import { selectOwners } from '../reducers/selectors';
 const mapStateToProps = (state, ownProps) => {
   const project = ownProps.project;
 // Working on creating project item container to pass SelectOwners as a prop
-// debugger
+
 
   return {
     projectOwners: selectOwners(state, project),
