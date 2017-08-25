@@ -16,6 +16,10 @@ class ProjectsIndex extends React.Component {
     return (
       <div className="projects-grid">
         { allProjects.map(project => <ProjectIndexItemContainer key={project.id} project={ project }/>) }
+        <div className="flex-spacer"></div>
+        <div className="flex-spacer"></div>
+        <div className="flex-spacer"></div>
+        <div className="flex-spacer"></div>
       </div>
     );
   }

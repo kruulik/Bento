@@ -10,6 +10,30 @@
   cursor: pointer;
 }
 
+.flex-spacer {
+  width: 202px;
+  height: 0px !important;
+  margin-right: 20px;
+}
+
+@media (max-width: 1181px) and (min-width: 960px) {
+  .projects-grid > div:nth-child(4n) {
+      margin-right: 0;
+  }
+}
+
+@media (max-width: 959px) and (min-width: 738px) {
+  .projects-grid > div:nth-child(3n) {
+      margin-right: 0;
+  }
+}
+
+@media (max-width: 737px) and (min-width: 604px) {
+  .projects-grid > div:nth-child(2n) {
+      margin-right: 0;
+  }
+}
+
 .project-card .thumb {
   background: lightgray;
   height: 158px;
@@ -33,6 +57,10 @@
   margin-bottom: 9px;
   overflow: hidden;
   display: block;
+}
+
+.project-card .title:hover {
+  text-decoration: underline;
 }
 
 .project-card .owners {
@@ -79,6 +107,18 @@
 .tooltip-container {
   position: relative;
   left: auto;
+}
+.tooltip-container:after {
+  content: '';
+  display: inline-block;
+  margin-left: 6px;
+  position: relative;
+  top: -1px;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid #191919;
+  height: 0;
+  width: 0;
 }
 
 .tooltip .owner {
