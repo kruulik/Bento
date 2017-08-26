@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Modal from 'react-modal';
-import modalStyle from './modal_style.js';
+import ModalStyle from './modal_style.js';
 
 
 class ProjectIndexItem extends React.Component {
@@ -11,7 +11,23 @@ class ProjectIndexItem extends React.Component {
     this.state = {
      modalOpen: false
    };
+   this.closeModal = this.closeModal.bind(this);
+   this.openModal = this.openModal.bind(this);
+  //  this.afterOpenModal = this.afterOpenModal.bind(this);
   }
+
+  closeModal() {
+  this.setState({ modalOpen: false });
+  // style.content.opacity = 0;
+}
+
+openModal() {
+  this.setState({ modalOpen: true });
+}
+
+// afterModalOpen() {
+//   style.content.opacity = 100;
+// }
 
   render () {
     const { projectOwners } = this.props;
@@ -51,9 +67,9 @@ class ProjectIndexItem extends React.Component {
       <div>
 
         <div className="project-card">
-          <div className="thumb"></div>
+          <div className="thumb" onClick={this.openModal}></div>
           <div className="details">
-            <Link to='#' className="title">{this.props.project.title} </Link>
+            <div onClick={this.openModal} className="title">{this.props.project.title} </div>
             {owners}
           </div>
         </div>
@@ -62,12 +78,35 @@ class ProjectIndexItem extends React.Component {
           isOpen={this.state.modalOpen}
           onAfterOpen={this.afterModalOpen}
           onRequestClose={this.closeModal}
-          style = {style}
-          contentLabel="Board Modal">
-          <div className="x-button">
-            <button onClick={this.closeModal}><i aria-hidden="true"></i>
-            </button>
-          </div>
+          style = { ModalStyle }
+          contentLabel="Project Modal"
+          className='modal-wrap'>
+
+            <div className="project-sidebar">
+              <div className="test-project-info">
+                <div className="project-detail-block">
+                  <div className="project-owner">
+                    <span className="owner-name">{owners}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="project-container">
+              <div className="project-canvas">
+                <div className="project-modules">
+                  <div className="project-module"></div>
+                  <div className="project-module"></div>
+                  <div className="project-module"></div>
+                  <div className="project-module"></div>
+                  <div className="project-module"></div>
+                  <div className="project-module"></div>
+                  <div className="project-module"></div>
+                  <div className="project-module"></div>
+                </div>
+              </div>
+
+            </div>
+
         </Modal>
 
       </div>

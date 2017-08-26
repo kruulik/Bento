@@ -5,3 +5,50 @@
   flex-wrap: wrap;
   justify-content: center;
 }
+
+body.ReactModal__Body--open {
+  overflow-y: hidden;
+}
+
+ReactModal__Overlay ReactModal__Overlay--after-open {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+// .porject-container {
+//   width: 100%;
+//   background: lightgray;
+//   margin-right: 280px;
+//   max-width: 1000px;
+//   background-color: #FFFFFF;
+// }
+
+
+.project-module {
+  height: 300px;
+  width: 90%;
+  background: gray;
+  border: 1px solid black;
+}
+
+.project-sidebar {
+  width: 280px;
+  height: 100%;
+  border-radius: 0 3px 3px 0;
+  right: 0;
+  top: 0;
+  background: #fafafa;
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.project-detail-block {
+  padding: 20px;
+  border-bottom: 1px solid #e8e8e8;
+  clear: left;
+  float: left;
+}
+
+.project {
+  margin-right: 280px;
+}
