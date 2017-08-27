@@ -8,27 +8,24 @@
 
 body.ReactModal__Body--open {
   overflow-y: hidden;
+  position: fixed;
 }
 
 ReactModal__Overlay ReactModal__Overlay--after-open {
-  padding-left: 50px;
-  padding-right: 50px;
+  // padding-left: 50px;
+  // padding-right: 50px;
 }
-
-// .porject-container {
-//   width: 100%;
-//   background: lightgray;
-//   margin-right: 280px;
-//   max-width: 1000px;
-//   background-color: #FFFFFF;
-// }
-
 
 .project-module {
   height: 300px;
-  width: 90%;
+  width: 100%;
   background: gray;
   border: 1px solid black;
+}
+
+.modal-wrap {
+  margin-top: 30px;
+  min-height: 600px;
 }
 
 .project-sidebar {
@@ -40,6 +37,16 @@ ReactModal__Overlay ReactModal__Overlay--after-open {
   background: #fafafa;
   position: absolute;
   box-sizing: border-box;
+  z-index: 2;
+}
+
+.project-info {
+  // height: 400px;
+  width: 280px;
+  // background: red;
+  // position: -webkit-sticky;
+  // position: absolute;
+
 }
 
 .project-detail-block {
@@ -47,8 +54,28 @@ ReactModal__Overlay ReactModal__Overlay--after-open {
   border-bottom: 1px solid #e8e8e8;
   clear: left;
   float: left;
+  width: 100%;
 }
 
 .project {
   margin-right: 280px;
+}
+
+.project-container {
+  margin-right: 280px;
+  box-sizing: border-box;
+  z-index: 1;
+  position: relative;
+}
+
+.stickycontainer {
+  height: 0px;
+  width: 100%;
+}
+
+.spill {
+  height: 300px;
+  width: 100%;
+  background: red;
+  position: absolute;
 }

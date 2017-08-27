@@ -2,6 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Modal from 'react-modal';
 import ModalStyle from './modal_style.js';
+import ProjectWrapContainer from './project_wrap_container';
+import ProjectSidebarContainer from './project_sidebar_container';
+import { StickyContainer, Sticky } from 'react-sticky';
 
 
 class ProjectIndexItem extends React.Component {
@@ -11,26 +14,23 @@ class ProjectIndexItem extends React.Component {
     this.state = {
      modalOpen: false
    };
+
    this.closeModal = this.closeModal.bind(this);
    this.openModal = this.openModal.bind(this);
-  //  this.afterOpenModal = this.afterOpenModal.bind(this);
   }
 
   closeModal() {
   this.setState({ modalOpen: false });
-  // style.content.opacity = 0;
-}
+  }
 
-openModal() {
-  this.setState({ modalOpen: true });
-}
 
-// afterModalOpen() {
-//   style.content.opacity = 100;
-// }
+  openModal() {
+    this.setState({
+      modalOpen: true });
+  }
 
   render () {
-    const { projectOwners } = this.props;
+    const { projectOwners, project } = this.props;
     let owners, ownerList;
 
     if ( projectOwners.length > 1 ) {
@@ -64,8 +64,7 @@ openModal() {
     }
 
     return (
-      <div>
-
+      <div >
         <div className="project-card">
           <div className="thumb" onClick={this.openModal}></div>
           <div className="details">
@@ -75,43 +74,18 @@ openModal() {
         </div>
 
         <Modal
+          onScroll={this.handleScroll}
           isOpen={this.state.modalOpen}
-          onAfterOpen={this.afterModalOpen}
           onRequestClose={this.closeModal}
           style = { ModalStyle }
           contentLabel="Project Modal"
           className='modal-wrap'>
-
-            <div className="project-sidebar">
-              <div className="test-project-info">
-                <div className="project-detail-block">
-                  <div className="project-owner">
-                    <span className="owner-name">{owners}</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="project-container">
-              <div className="project-canvas">
-                <div className="project-modules">
-                  <div className="project-module"></div>
-                  <div className="project-module"></div>
-                  <div className="project-module"></div>
-                  <div className="project-module"></div>
-                  <div className="project-module"></div>
-                  <div className="project-module"></div>
-                  <div className="project-module"></div>
-                  <div className="project-module"></div>
-                </div>
-              </div>
-
-            </div>
-
+          <div className="project-wrapper">
+            <ProjectSidebarContainer project={ project } />
+            <ProjectWrapContainer project={ project } />
+          </div>
         </Modal>
-
       </div>
-
-
     );
   }
 }

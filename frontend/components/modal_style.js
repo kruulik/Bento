@@ -12,11 +12,13 @@ const ModalStyle = {
     zIndex            : 999,
     overflowY         : 'scroll',
     paddingLeft       : '50px',
-    paddingRight      : '50px'
+    paddingRight      : '50px',
+    height : '100%'
   },
-  content : {
 
-    marginTop                  : '30px',
+
+  content : {
+    // paddingTop       : '30px',
     marginBottom               : '80px',
     top                        : 0,
     bottom                     : 0,
@@ -29,9 +31,10 @@ const ModalStyle = {
     outline                    : 'none',
     backgroundColor            : 'rgba(0, 0, 0, 0)',
     zIndex                     : 1000,
-    opacity                    : '0.3',
+    opacity                    : 1,
     transition                 : 'opacity 0.4s',
-    position                   : 'relative'
+    position                   : 'relative',
+    boxSizing                  : 'border-box'
   }
 
 };

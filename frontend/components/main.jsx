@@ -5,11 +5,21 @@ import DiscoverContainer from './discover_container';
 
 class Main extends React.Component {
 
+  componentDidMount(){
+    window.addEventListener('scroll', this.handleScroll);
+  }
+
+  componentWillUnmount(){
+    window.removeEventListener('scroll', this.handleScroll);
+  }
+
+  
+
   render() {
   let topPanel;
 
   topPanel = ( <HeaderContainer /> );
-  
+
   return (
     <div>
       <div className="topPanel">{ topPanel }</div>

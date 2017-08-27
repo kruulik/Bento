@@ -2,6 +2,10 @@ html {
   background: #191919;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   background: #f9f9f9;
   font-size: 14px;
