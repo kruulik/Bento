@@ -7,7 +7,6 @@ import { AuthRoute } from '../util/route_util';
 // import Scroll from 'react-scroll';
 
 const App = () => {
-  // debugger
   return (
 
     <Switch>

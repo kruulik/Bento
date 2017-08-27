@@ -1,5 +1,4 @@
 import React from 'react';
-import Sticky from 'react-stickynode';
 
 class ProjectSidebar extends React.Component {
 
@@ -52,19 +51,6 @@ class ProjectSidebar extends React.Component {
 
       }
     }
-
-    // if ( sbRec.top < 1 && (sbRec.bottom - modRec.bottom) > 0) {
-    //   // debugger
-    //   this.setState({
-    //     stickystyle: {position: 'fixed', top: 0}
-    //   });
-    // } else {
-    //   let pos = this.getStickyTop();
-    //   // debugger
-    //   this.setState({
-    //     stickystyle: {position: 'absolute', top: pos}
-    //   });
-    // }
   }
 
 
