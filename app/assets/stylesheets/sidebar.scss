@@ -1,0 +1,78 @@
+.project-sidebar {
+
+  .owners-block {
+    font-weight: bold;
+    font-size: 16px;
+
+  }
+
+  .title {
+    font-weight: bold;
+    font-size: 16px;
+    word-wrap: break-word;
+    margin-top: -4px;
+  }
+
+  .menu-item {
+    margin: 0px;
+  }
+
+  .owner-actions {
+    margin-top: 5px;
+    display: inline-block;
+  }
+
+  .fields {
+    margin-top: 2px;
+    color: dimgray;
+    font-size: 13px;
+    line-height: 18px;
+  }
+
+  .stats {
+    margin-top: 6px;
+  }
+
+  .stats > span {
+    margin-right: 6px;
+    color: dimgray;
+    line-height: 20px;
+    height: 20px;
+  }
+
+  .views:before {
+    content: "|||||";
+    color: dimgray;
+    font-size: 16px;
+    height: 16px;
+    width: 16px;
+    margin-right: 3px;
+  }
+
+  .likes:before {
+    content: "|||||";
+    color: dimgray;
+    font-size: 16px;
+    height: 16px;
+    width: 16px;
+    margin-right: 3px;
+  }
+  .comments:before {
+    content: "|||||";
+    color: dimgray;
+    font-size: 16px;
+    height: 16px;
+    width: 16px;
+    margin-right: 3px;
+  }
+
+  .published {
+    margin-top: 14px;
+    font-size: 11px;
+    color: #a4a4a4;
+  }
+
+
+
+
+}

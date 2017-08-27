@@ -31,13 +31,15 @@ class ProjectIndexItem extends React.Component {
     const { projectOwners, project } = this.props;
     let owners, ownerList;
 
+
+
     if ( projectOwners.length > 1 ) {
       ownerList = projectOwners.map((owner, idx) => {
-
+        // debugger
         return (
         <div key={idx} className="owner">
           <span className="owner-image-container">
-            <img src="" className="owner-image"/>
+            <img src={owner.avatar_url} className="owner-image"/>
           </span>
           <span className="owner-name">
             {owner.f_name + " " +  owner.l_name}
@@ -60,6 +62,7 @@ class ProjectIndexItem extends React.Component {
         {projectOwners[0].f_name + " " + projectOwners[0].l_name}
       </div>;
     }
+
 
     return (
       <div >

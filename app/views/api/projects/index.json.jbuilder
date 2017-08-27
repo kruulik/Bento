@@ -10,6 +10,7 @@ json.owners do
   @projects.each do |project|
     project.owners.each do |owner|
       json.set! owner.id do
+        json.avatar_url asset_path(owner.avatar.url)
         json.extract! owner, :id, :f_name, :l_name
       end
     end
