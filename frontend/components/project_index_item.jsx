@@ -4,8 +4,6 @@ import Modal from 'react-modal';
 import ModalStyle from './modal_style.js';
 import ProjectWrapContainer from './project_wrap_container';
 import ProjectSidebarContainer from './project_sidebar_container';
-import { StickyContainer, Sticky } from 'react-sticky';
-
 
 class ProjectIndexItem extends React.Component {
 

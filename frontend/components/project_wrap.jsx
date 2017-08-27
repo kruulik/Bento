@@ -1,11 +1,5 @@
 import React from 'react';
 
-const handleStateChange = (status) => {
-  if (status.status === Sticky.STATUS_FIXED) {
-      console.log('the component is sticky');
-  }
-};
-
 class ProjectWrap extends React.Component {
 
   constructor(props) {
