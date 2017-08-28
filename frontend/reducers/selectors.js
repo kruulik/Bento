@@ -7,5 +7,6 @@ export const selectOwners = (state, project) => {
 };
 
 export const selectItems = (state, project) => {
+  // debugger
   return project.item_ids.map(id => state.items[id]);
 };

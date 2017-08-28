@@ -7,14 +7,14 @@ const mapStateToProps = (state, ownProps) => {
   const project = ownProps.project;
   return {
     projectOwners: selectOwners(state, project),
-    state
+    // state
   };
 };
 
-const mapDispatchToProps = dispatch => {
-  return {
-    requestOwners: () => dispatch(requestOwners)
-  };
-};
+// const mapDispatchToProps = dispatch => {
+//   return {
+//     requestOwners: () => dispatch(requestOwners)
+//   };
+// };
 
-export default connect(mapStateToProps, mapDispatchToProps)(ProjectSidebar);
+export default connect(mapStateToProps, null)(ProjectSidebar);

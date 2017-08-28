@@ -13,7 +13,7 @@ class Main extends React.Component {
     window.removeEventListener('scroll', this.handleScroll);
   }
 
-  
+
 
   render() {
   let topPanel;
@@ -25,6 +25,7 @@ class Main extends React.Component {
       <div className="topPanel">{ topPanel }</div>
       <div className="site-content">
         <Switch>
+          <Route path="/discover" component={DiscoverContainer} />
           <Route path="/" exact component={DiscoverContainer} />
         </Switch>
       </div>

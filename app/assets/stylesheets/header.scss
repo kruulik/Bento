@@ -8,6 +8,7 @@
   width: 100%;
   align-items: center;
   z-index: 999;
+  padding-right: 30px;
 }
 
 .link {
@@ -23,7 +24,7 @@
   color: #fff;
 }
 
-.link.active {
+.active {
   color: #fff;
 }
 
@@ -37,6 +38,9 @@
 
 .menu-item {
   margin: 0 10px;
+  display: inline-block;
+  position: relative;
+  margin: 0 10px;
 }
 
 .session-actions {
@@ -48,4 +52,67 @@
 
 .github {
   font-weight: 400;
+}
+
+.user-profile-action .tooltip {
+  top: 0px !important ;
+  right: -43px !important;
+}
+
+.user-profile-action .tooltip:before {
+  right: 15px;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  content: '';
+  position: absolute;
+  border-bottom: calc(6px + 2px) solid #fff;
+  border-top: 0;
+  bottom: auto;
+  top: -7px;
+  transform: translateX(-50%);
+}
+
+.user-profile-action:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+  transition-property: visibility opacity;
+  transition-duration: 0s 0.25s;
+  transition-delay: 0s;
+}
+
+.user-profile-action .tooltip {
+  border-radius: 3px;
+  box-shadow: 0 2px 8px rgba(25,25,25,0.3);
+  transition: visibility 0s linear 0.25s, opacity 0.25s linear;
+  visibility: hidden;
+  opacity: 0;
+  padding: 10px;
+  background-color: white;
+  position: absolute;
+  right: -14px;
+  left: auto;
+  top: 0px;
+}
+
+.user-profile-action .tooltip-container:after {
+  display: none;
+}
+
+.tooltip .profile {
+  padding: 10px 20px 20px;
+  width: 280px;
+}
+
+.avatar.thumb-med {
+  height: 65px;
+  width: 65px;
+  margin-right: 14px;
+  border-radius: 50%
+}
+
+.main-menu {
+  margin: 0 auto;
+  text-align: center;
+  width: calc(100% - 500px);
+  display: block;
 }

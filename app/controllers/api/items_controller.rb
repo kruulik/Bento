@@ -1,4 +1,4 @@
-class Api::ProjectsController < ApplicationController
+class Api::ItemsController < ApplicationController
   before_action :require_logged_in, only: [:create, :update, :destroy]
 
   def create
@@ -12,7 +12,7 @@ class Api::ProjectsController < ApplicationController
   end
 
   def index
-    @items = Item.find(params[:project_id]).items
+    @items = Project.find(params[:project_id]).items
   end
 
   private

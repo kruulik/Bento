@@ -87,7 +87,7 @@ class ProjectSidebar extends React.Component {
       owners = (
         <div className="owners">
           <span className="tooltip-container">Multiple Owners
-            <div className="tooltip">
+            <div className="sidebar tooltip">
               {ownerList}
             </div>
           </span>
@@ -111,7 +111,7 @@ class ProjectSidebar extends React.Component {
                 <div className="owner-actions">
                   <div className="button__container menu-item button-small">
                     <div className="form-button">
-                      <span className="button__label">Follow</span>
+                      <span className="button__label">Follow All</span>
                     </div>
                   </div>
                 </div>

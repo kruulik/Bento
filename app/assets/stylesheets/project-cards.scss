@@ -93,11 +93,12 @@
   font-size: 13px;
 }
 
-.tooltip {
+.owners .tooltip {
   border-radius: 3px;
   box-shadow: 0 2px 8px rgba(25,25,25,0.3);
   transition: visibility 0s linear 0.25s, opacity 0.25s linear;
   visibility: hidden;
+  opacity: 0;
   padding: 10px;
   background-color: white;
   position: absolute;
@@ -141,6 +142,9 @@
 
 .owners:hover .tooltip {
   visibility: visible;
+  opacity: 1;
+  transition-property: visibility opacity;
+  transition-duration: 0s 0.25s;
   transition-delay: 0s;
 }
 
