@@ -3,7 +3,6 @@
   .owners-block {
     font-weight: bold;
     font-size: 16px;
-
   }
 
   .title {
@@ -20,6 +19,18 @@
   .owner-actions {
     margin-top: 5px;
     display: inline-block;
+  }
+
+  .owner-image {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    right: 0;
+    top: 0;
+  }
+
+  .owners:after {
+    display: none;
   }
 
   .fields {
@@ -72,6 +83,9 @@
     color: #a4a4a4;
   }
 
+  .appreciate {
+    text-align: center;
+  }
 
 
 

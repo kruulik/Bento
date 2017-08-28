@@ -76,7 +76,7 @@ class ProjectSidebar extends React.Component {
         return (
           <div key={idx} className="owner">
             <span className="owner-image-container">
-              <img src="" className="owner-image"/>
+              <img src={owner.avatar_url} className="owner-image"/>
             </span>
             <span className="owner-name">
               {owner.f_name + " " + owner.l_name}
@@ -96,7 +96,8 @@ class ProjectSidebar extends React.Component {
       );
     } else {
       owners = <div className="owners">
-        {projectOwners[0].f_name + " " + projectOwners[0].l_name}
+        <div className="name">{projectOwners[0].f_name + " " + projectOwners[0].l_name}</div>
+        <img src={projectOwners[0].avatar_url} className="owner-image"/>
       </div>;
     }
 
@@ -142,7 +143,7 @@ class ProjectSidebar extends React.Component {
             <div className="project-detail-block">
 
               <div className="button__container menu-item">
-                <div className="form-button">
+                <div className="form-button appreciate">
                   <span className="button__label">Appreciate Project</span>
                 </div>
               </div>

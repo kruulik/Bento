@@ -84,7 +84,8 @@
 
 .button__container:hover {
   background: #003ecb;
-  transition: visibility 0s linear 0.1s, opacity 0.25s linear;
+  transition-duration: 300ms;
+  cursor: pointer;
 }
 
 .owners {
