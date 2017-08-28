@@ -8,7 +8,7 @@ class ProjectWrap extends React.Component {
 
 
   render() {
-    debugger
+    // debugger
     return (
 
     <div className="project-container">

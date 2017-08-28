@@ -35,3 +35,11 @@ o6 = Ownership.create(user_id: user4.id, project_id: p6.id)
 o6 = Ownership.create(user_id: user4.id, project_id: p7.id)
 o6 = Ownership.create(user_id: user4.id, project_id: p8.id)
 o6 = Ownership.create(user_id: user4.id, project_id: p9.id)
+
+Item.destroy_all
+i1 = Item.create(project_id: p1.id, body: 'Project 1 Header')
+i1 = Item.create(project_id: p1.id, image: File.new("#{Rails.root}/app/assets/images/project-items.png"))
+i2 = Item.create(project_id: p1.id, image: File.new("#{Rails.root}/app/assets/images/project-items2.png"))
+i3 = Item.create(project_id: p1.id, image: File.new("#{Rails.root}/app/assets/images/project-items3.png"))
+i4 = Item.create(project_id: p1.id, image: File.new("#{Rails.root}/app/assets/images/project-items4.png"))
+i5 = Item.create(project_id: p1.id, image: File.new("#{Rails.root}/app/assets/images/project-items5.png"))

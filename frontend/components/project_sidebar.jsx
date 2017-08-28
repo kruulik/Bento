@@ -97,7 +97,7 @@ class ProjectSidebar extends React.Component {
     } else {
       owners = <div className="owners">
         <div className="name">{projectOwners[0].f_name + " " + projectOwners[0].l_name}</div>
-        <img src={projectOwners[0].avatar_url} className="owner-image"/>
+        <img src={projectOwners[0].avatar_url} className="owner-image medium"/>
       </div>;
     }
 

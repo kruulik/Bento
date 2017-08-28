@@ -19,25 +19,12 @@ class Item < ApplicationRecord
   validates :image, attachment_presence: true, :unless => :body?
   validates :body, presence: true, :unless => :image?
 
-  # validates :body, allow_nil: true
-  # validates :image, allow_nil: true
-
   has_attached_file :image, default_url: "missing.png"
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
-
-  # validates :image_or_text
 
   belongs_to :project
   has_one :user,
     through: :project
-
-  private
-
-  def image_or_text
-    unless body.empty? ^ image.empty?
-      errors.add(:base, "Please select an image or enter text, not both!")
-    end
-  end
 
 
 end
