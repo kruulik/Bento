@@ -19,14 +19,13 @@ class ProjectWrap extends React.Component {
 
     if (!projectItems[0]) {
       console.log('loading...');
-      return (<div>Loading..?</div>);
+      return (<div className="modules-loading"><span>Loading... (or there's no content)</span></div>);
     } else {
 
 
 
     // debugger
     modules = projectItems.map((item, idx) => {
-      // debugger
       if ( item.image_url ) {
         return (
           <div key={idx} className="project-module image-module">
@@ -35,7 +34,7 @@ class ProjectWrap extends React.Component {
         );
       } else {
         return (
-          <div key={idx} className="project-module text-module">
+          <div key={idx} className='project-module text-module'>
             <span className="main-text">{item.body}</span>
           </div>
         );

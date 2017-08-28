@@ -2,6 +2,20 @@
 
   background: #c6c6c6;
 
+  .modules-loading {
+    position: relative;
+    margin-right: 280px;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(10, 10, 10, .2);
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0px 1px 2px rgba(10, 10, 10, .2);
+  }
+
   .image-module {
     width: 100%;
     // height: 400px !important;
@@ -12,15 +26,19 @@
   }
 
   .text-module {
-    margin: 15px auto 0px;
     padding-right: 7%;
     padding-left: 7%;
     min-height: 15px;
   }
 
-  .text-module:first-child{
-    padding-top: 80px;
+  .text-module {
+    padding-top: 40px;
+    padding-bottom: 30px;
   }
 
+  .text-module + .text-module {
+    padding-top: 0px;
+    padding-bottom: 20px;
+  }
 
 }

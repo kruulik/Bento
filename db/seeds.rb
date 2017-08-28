@@ -40,9 +40,12 @@ Item.destroy_all
 i1 = Item.create(project_id: p1.id, body: 'THE TOKYO RESTAURANT.')
 i2 = Item.create(project_id: p1.id, body: 'The Tokyo Restaurant. is a Japanese restaurant & bar in Kuala Lumpur, Malaysia. The restaurant offers contemporary dining experience of mixed genres, all with a hint of Japanese twists. ')
 i3 = Item.create(project_id: p1.id, body: 'The key concept for the identity is “marriage of authenticity and light-heartedness.” Classic typefaces were chosen to create an authentic atmosphere for the brand, while the abstracted monogram adds a contemporary, approachable look to the logo.​​​​​​​')
+i3 = Item.create(project_id: p1.id, body: ' ​​​​')
 
 i1 = Item.create(project_id: p1.id, image: File.new("#{Rails.root}/app/assets/images/project-items.png"))
 i2 = Item.create(project_id: p1.id, image: File.new("#{Rails.root}/app/assets/images/project-items2.png"))
 i3 = Item.create(project_id: p1.id, image: File.new("#{Rails.root}/app/assets/images/project-items3.png"))
+i1b = Item.create(project_id: p1.id, body: 'This is another section of text, with a spacer div below it!.')
+i3b = Item.create(project_id: p1.id, body: ' ​​​​')
 i4 = Item.create(project_id: p1.id, image: File.new("#{Rails.root}/app/assets/images/project-items4.png"))
 i5 = Item.create(project_id: p1.id, image: File.new("#{Rails.root}/app/assets/images/project-items5.png"))
