@@ -19,7 +19,7 @@ class Item < ApplicationRecord
   validates :image, attachment_presence: true, :unless => :body?
   validates :body, presence: true, :unless => :image?
 
-  has_attached_file :image, default_url: "missing.png"
+  has_attached_file :image
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
   belongs_to :project
