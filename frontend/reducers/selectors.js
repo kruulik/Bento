@@ -10,3 +10,7 @@ export const selectItems = (state, project) => {
   // debugger
   return project.item_ids.map(id => state.items[id]);
 };
+
+export const selectComments = (state, project) => {
+  return project.comment_ids.map(id => state.comments[id]);
+};

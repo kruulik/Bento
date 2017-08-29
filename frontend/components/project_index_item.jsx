@@ -5,6 +5,7 @@ import ModalStyle from './modal_style.js';
 import ProjectWrapContainer from './project_wrap_container';
 import ProjectSidebarContainer from './project_sidebar_container';
 
+
 class ProjectIndexItem extends React.Component {
 
   constructor(props) {
@@ -84,6 +85,7 @@ class ProjectIndexItem extends React.Component {
           <div className="project-wrapper">
             <ProjectSidebarContainer project={ project } />
             <ProjectWrapContainer project={ project } />
+            
           </div>
         </Modal>
       </div>

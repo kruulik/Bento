@@ -29,7 +29,7 @@ const ModalStyle = {
     WebkitOverflowScrolling    : 'touch',
     borderRadius               : '0',
     outline                    : 'none',
-    backgroundColor            : 'rgba(250, 250, 250, 1)',
+    backgroundColor            : 'rgba(250, 250, 250, 0)',
     zIndex                     : 1000,
     opacity                    : 1,
     transition                 : 'opacity 0.4s',

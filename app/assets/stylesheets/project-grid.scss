@@ -64,6 +64,7 @@ body.ReactModal__Body--open {
   box-sizing: border-box;
   z-index: 1;
   position: relative;
+  border-radius: 3px 0 0;
 }
 
 .stickycontainer {
@@ -76,4 +77,17 @@ body.ReactModal__Body--open {
   width: 100%;
   background: red;
   position: absolute;
+}
+
+.project-bottom {
+  background: #fafafa;
+  border-radius: 0 0 0 3px;
+  padding-top: 8%;
+  padding-bottom: 8%;
+  min-height: 325px;
+}
+.bottom-inner {
+  margin: 0 auto;
+  padding: 0 25px;
+  max-width: 750px;
 }

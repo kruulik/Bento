@@ -1,4 +1,5 @@
 import React from 'react';
+import CommentsContainer from './comments_container';
 
 class ProjectWrap extends React.Component {
 
@@ -15,10 +16,9 @@ class ProjectWrap extends React.Component {
     // debugger
 
     let modules;
-    const { projectItems } = this.props;
+    const { projectItems, project } = this.props;
 
     if (!projectItems[0]) {
-      console.log('loading...');
       return (<div className="modules-loading"><span>Loading... (or there's no content)</span></div>);
     } else {
 
@@ -42,17 +42,18 @@ class ProjectWrap extends React.Component {
 
 
     });
-
+    // debugger
     return (
-
     <div className="project-container">
-
       <div className="project-canvas">
-
         <div className="project-modules">
           {modules}
         </div>
-
+      </div>
+      <div className="project-bottom">
+        <div className="bottom-inner">
+          <CommentsContainer project={ project } />
+        </div>
       </div>
     </div>
 

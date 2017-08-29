@@ -13,13 +13,13 @@ const CommentsReducer = (state = {}, action) => {
   switch (action.type) {
     case RECEIVE_COMMENTS:
     // debugger
-      return  action.payload;
+    return merge({}, state, action.comments);
     case RECEIVE_COMMENT:
-    debugger
+    // debugger
       return merge({}, state, action.payload.comment);
     case REMOVE_COMMENT:
     // debugger
-      return merge({}, state, action.payload);
+      return merge({}, state, action.comment);
     default:
       return state;
   }

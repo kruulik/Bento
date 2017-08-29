@@ -111,7 +111,7 @@ class ProjectSidebar extends React.Component {
                 <div className="owner-actions">
                   <div className="button__container menu-item button-small">
                     <div className="form-button">
-                      <span className="button__label">Follow All</span>
+                      <span className="button__label">Follow</span>
                     </div>
                   </div>
                 </div>
