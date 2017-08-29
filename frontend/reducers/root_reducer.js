@@ -3,12 +3,14 @@ import SessionReducer from './session_reducer';
 import ProjectsReducer from './projects_reducer';
 import UsersReducer from './users_reducer';
 import ItemsReducer from './items_reducer';
+import CommentsReducer from './comments_reducer';
 
 const rootReducer = combineReducers({
   session: SessionReducer,
   projects: ProjectsReducer,
   users: UsersReducer,
-  items: ItemsReducer
+  items: ItemsReducer,
+  comments: CommentsReducer
 });
 
 export default rootReducer;

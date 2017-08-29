@@ -12,8 +12,8 @@ following criteria with smooth, bug-free navigation, adequate seed data and suff
 
 - [X] Hosting on Heroku
 - [X] New account creation, login, and guest/demo login
-- [ ] Portfolio Viewing
-- [ ] Explore Portfolios
+- [X] Project Viewing
+- [X] Explore Projects
 - [ ] Likes
 - [ ] Comments
 
