@@ -8,7 +8,8 @@ export const requestComments = projectId => {
 export const postComment = comment => {
   return $.ajax({
     url: `/api/comments`,
-    method: "Post"
+    method: "POST",
+    data: { comment }
   });
 };
 

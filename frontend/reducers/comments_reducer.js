@@ -1,5 +1,7 @@
 import {
-  RECEIVE_COMMENTS
+  RECEIVE_COMMENTS,
+  RECEIVE_COMMENT,
+  REMOVE_COMMENT
 } from '../actions/comment_actions';
 import {
   merge
@@ -7,9 +9,17 @@ import {
 
 const CommentsReducer = (state = {}, action) => {
   Object.freeze(state);
+
   switch (action.type) {
     case RECEIVE_COMMENTS:
-      return merge({}, state, action.items);
+    // debugger
+      return  action.payload;
+    case RECEIVE_COMMENT:
+    debugger
+      return merge({}, state, action.payload.comment);
+    case REMOVE_COMMENT:
+    // debugger
+      return merge({}, state, action.payload);
     default:
       return state;
   }

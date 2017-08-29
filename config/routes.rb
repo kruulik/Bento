@@ -10,6 +10,8 @@ Rails.application.routes.draw do
     end
 
     resources :owners, only: [:create, :show, :index]
+    resources :comments, only: [:create, :destroy, :index]
+    resources :items, only: [:index, :show]
 
   end
 
