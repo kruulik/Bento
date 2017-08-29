@@ -27,8 +27,8 @@ class User < ApplicationRecord
   has_attached_file :avatar, default_url: "default_avatar.jpg"
   validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\z/
 
-  has_many :ownerships
-
+  has_many :ownerships, dependent: :destroy
+  has_many :comments, dependent: :destroy
 
   attr_reader :password
 
