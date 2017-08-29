@@ -16,7 +16,7 @@
 class Item < ApplicationRecord
   validates :project_id, presence: true
 
-  validates :image, attachment_presence: true, unless: :body?
+  # validates :image, attachment_presence: true, unless: :body?
   # validates :body, presence: true, unless: :image?
   validate :body_if_no_image
 

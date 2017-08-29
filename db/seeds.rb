@@ -49,3 +49,25 @@ i1b = Item.create(project_id: p1.id, body: 'This is another section of text, wit
 i3b = Item.create(project_id: p1.id, body: ' ​​​​')
 i4 = Item.create(project_id: p1.id, image: File.new("#{Rails.root}/app/assets/images/project-items4.png"))
 i5 = Item.create(project_id: p1.id, image: File.new("#{Rails.root}/app/assets/images/project-items5.png"))
+
+# ###################
+# PROJECT 2
+
+
+i6 = Item.create(project_id: p2.id, image: File.new("#{Rails.root}/app/assets/images/project-items6.png"))
+i7 = Item.create(project_id: p2.id, image: File.new("#{Rails.root}/app/assets/images/project-items7.png"))
+i8 = Item.create(project_id: p2.id, image: File.new("#{Rails.root}/app/assets/images/project-items8.png"))
+i9 = Item.create(project_id: p2.id, image: File.new("#{Rails.root}/app/assets/images/project-items9.png"))
+i10 = Item.create(project_id: p2.id, image: File.new("#{Rails.root}/app/assets/images/project-items10.png"))
+
+# ###################
+# PROJECT 3
+
+i11 = Item.create(project_id: p3.id, image: File.new("#{Rails.root}/app/assets/images/project-items11.png"))
+i12 = Item.create(project_id: p3.id, image: File.new("#{Rails.root}/app/assets/images/project-items12.png"))
+i13 = Item.create(project_id: p3.id, image: File.new("#{Rails.root}/app/assets/images/project-items13.png"))
+i14 = Item.create(project_id: p3.id, image: File.new("#{Rails.root}/app/assets/images/project-items14.png"))
+i15 = Item.create(project_id: p3.id, image: File.new("#{Rails.root}/app/assets/images/project-items15.png"))
+i16 = Item.create(project_id: p3.id, body: 'Heyyy and heres some more text, with TWO (user generated) spacers beneath it!.')
+i16b = Item.create(project_id: p3.id, body: )
+i16c = Item.create(project_id: p3.id, body: ' ')
