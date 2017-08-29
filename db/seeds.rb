@@ -69,5 +69,5 @@ i13 = Item.create(project_id: p3.id, image: File.new("#{Rails.root}/app/assets/i
 i14 = Item.create(project_id: p3.id, image: File.new("#{Rails.root}/app/assets/images/project-items14.png"))
 i15 = Item.create(project_id: p3.id, image: File.new("#{Rails.root}/app/assets/images/project-items15.png"))
 i16 = Item.create(project_id: p3.id, body: 'Heyyy and heres some more text, with TWO (user generated) spacers beneath it!.')
-i16b = Item.create(project_id: p3.id, body: )
+i16b = Item.create(project_id: p3.id, body: ' ')
 i16c = Item.create(project_id: p3.id, body: ' ')
