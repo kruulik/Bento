@@ -4,15 +4,17 @@ export const RECEIVE_COMMENTS = 'RECEIVE_COMMENTS';
 export const RECEIVE_COMMENT = 'RECEIVE_COMMENT';
 export const REMOVE_COMMENT = 'REMOVE_COMMENT';
 
-export const receiveComments = ({ comments, errors}) => ({
+export const receiveComments = ({ comments, errors}) => {
+debugger
+return   ({
   type: RECEIVE_COMMENTS,
   comments,
   errors
-});
+});};
 
-export const receiveComment = payload => ({
+export const receiveComment = comment => ({
   type: RECEIVE_COMMENT,
-  payload
+  comment
 });
 
 export const removeComment = comment => ({
@@ -22,16 +24,16 @@ export const removeComment = comment => ({
 
 export const requestComments = projectId => (dispatch) => {
   return APIUtil.requestComments(projectId)
-  .then(payload => dispatch(receiveComments(payload))
+  .then(comments => dispatch(receiveComments(comments))
   );
 };
 
 export const createComment = comment => dispatch => (
   APIUtil.postComment(comment)
-    .then(payload => dispatch(receiveComments(payload)))
+    .then(comment => dispatch(receiveComment(comment)))
 );
 
-export const deleteComment = commentId => dispatch => (
-  APIUtil.deleteComment(commentId)
-    .then(comment => dispatch(removeComment(comment)))
+export const deleteComment = comment => dispatch => (
+  APIUtil.deleteComment(comment.id)
+    .then(() => dispatch(removeComment(comment)))
 );

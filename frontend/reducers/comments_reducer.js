@@ -9,17 +9,20 @@ import {
 
 const CommentsReducer = (state = {}, action) => {
   Object.freeze(state);
-
+  let nextState;
+  // debugger
   switch (action.type) {
     case RECEIVE_COMMENTS:
     // debugger
     return merge({}, state, action.comments);
     case RECEIVE_COMMENT:
-    // debugger
-      return merge({}, state, action.payload.comment);
+    debugger
+      return merge({}, state, {[action.comment.id]: action.comment});
     case REMOVE_COMMENT:
     // debugger
-      return merge({}, state, action.comment);
+      nextState = merge({}, state);
+      delete nextState[action.comment.id];
+      return nextState;
     default:
       return state;
   }

@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
 // TESTING ONLY
-// import {createComment, requestComments, deleteComment} from './actions/comment_actions';
+import {createComment, requestComments, deleteComment} from './actions/comment_actions';
 // import {
 //   RECEIVE_COMMENTS,
 //   RECEIVE_COMMENT,
@@ -28,9 +28,9 @@ document.addEventListener('DOMContentLoaded', () => {
   window.store = store;
   window.getState = store.getState;
   window.dispatch = store.dispatch;
-  // window.createComment = createComment;
-  // window.requestComments = requestComments;
-  // window.deleteComment = deleteComment;
+  window.createComment = createComment;
+  window.requestComments = requestComments;
+  window.deleteComment = deleteComment;
   //
 
   const root = document.getElementById('root');
