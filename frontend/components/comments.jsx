@@ -47,7 +47,7 @@ class Comments extends React.Component {
         </div>
       );
     } else {
-      debugger
+      // debugger
       commentForm = (
         <div className="comment-post-container clearfix">
 
