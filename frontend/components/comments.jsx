@@ -1,43 +1,73 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import moment from 'moment';
 
 class Comments extends React.Component {
 
   constructor(props) {
     super(props);
 
+    this.state = {
+      body: '',
+      project_id: this.props.project_id
+    };
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   componentDidMount() {
     this.props.requestComments(this.props.project.id);
   }
 
-  componentWillReceiveProps(nextProps) {
+  handleSubmit(e) {
+    e.preventDefault();
+    let commentBody = this.state.body;
+    let projectId = this.props.project.id;
+    this.props.createComment({body: commentBody, project_id: projectId}).then();
+    this.setState({body: ""});
+  }
 
+  handleChange(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    this.setState({body: e.currentTarget.value});
   }
 
   render() {
-    // debugger
-    let comments, commentForm;
+    let comments,
+      commentForm,
+      commentAction;
     const {projectComments, state, deleteComment} = this.props;
+    const {currentUser} = this.props.state.session;
     if (!state.session.currentUser) {
       commentForm = (
         <div className="post-comment-logged-out">
-          You must <Link to='/signup'>sign up </Link>to join the conversation.
+          You must <Link to='/signup'>sign up</Link> to join the conversation.
         </div>
       );
     } else {
+      debugger
       commentForm = (
-        <div className="comment-post-container">
+        <div className="comment-post-container clearfix">
+
           <Link className="user-avatar" to={`/api/users/${state.session.currentUser.id}`}>
             <img className="avatar-image" src={state.users[state.session.currentUser.id].avatar_url}/>
           </Link>
+
           <div className="comment-post">
+            <form className="comments-form" onSubmit={this.handleSubmit}>
+              <div className="comment-container">
+                <textarea id="comment" className="text-area" value={this.state.body} onChange={this.handleChange}/>
+              </div>
+              <button className="button__container form-button">Post a Comment</button>
+            </form>
 
           </div>
 
         </div>
       );
+
     }
 
     if (!projectComments.length === 0) {
@@ -50,57 +80,69 @@ class Comments extends React.Component {
         </div>
       );
     } else {
-      // debugger
-      comments = projectComments.map((comment, idx) => {
+      //
+      //
+      //
+      //
+      // sorting before map causes my list of comments to switch order every time a letter is typed into the form!
+
+      comments = projectComments.slice().reverse().map((comment, idx) => {
         if (!comment) {
           return (null);
         }
-        // debugger
+        if (currentUser && comment.user_id === currentUser.id) {
+          commentAction = (
+            <div className="comment-action">
+              <svg className="delete-comment" version="1.1" xmlns="http://www.w3.org/2000/svg" onClick={deleteComment.bind(null, comment)}>
+                <line x1="1" y1="8" x2="8" y2="1" stroke="#6f6f6f" strokeWidth="2.5"/>
+                <line x1="1" y1="1" x2="8" y2="8" stroke="#6f6f6f" strokeWidth="2.5"/>
+              </svg>
+            </div>
+          );
+        } else {
+          (
+            <div className="comment-action"></div>
+          );
+        }
+
         return (
-          <li className="comment-container" key={idx}>
+          <li className="user-comment clearfix" key={idx}>
             <Link className="user-avatar" to={`/api/users/${comment.user_id}`}>
               <img className="avatar-image" src={state.users[comment.user_id].avatar_url}/>
             </Link>
             <div className="comment-text-container">
               <div className="comment-user-date">
-                <div className="username bold">
-                  <Link className="user-avatar" to={`/api/users/${comment.user_id}`}>
+                <span className="username">
+                  <Link to={`/api/users/${comment.user_id}`}>
                     {comment.username}
                   </Link>
-                </div>
+                </span>
+                <span className="comment-date">
+                  {moment(comment.createdOn).fromNow()}
+                </span>
               </div>
               <div className="comment-text">
                 {comment.body}
               </div>
-              <div className="comment-date">
-                'Need data for this'
-              </div>
-              <div className="comment-action" onClick={ deleteComment.bind(null, comment) }>
-                <svg  version="1.1" xmlns="http://www.w3.org/2000/svg">
-                  <line x1="1" y1="8" x2="8" y2="1" stroke="gray" strokeWidth="2.5"/>
-                  <line x1="1" y1="1" x2="8" y2="8" stroke="gray" strokeWidth="2.5"/>
-                </svg>
-              </div>
 
-              <div className="comment-actions">
-              </div>
             </div>
+            {commentAction}
           </li>
         );
       });
     }
     // debugger
     return (
+
       <div className="comments-block">
         <h3 className="project-block-header">Comments</h3>
-          {commentForm}
+        {commentForm}
         <div>
           <ul className="comments-list">
             {comments}
           </ul>
         </div>
       </div>
-
     );
 
   }

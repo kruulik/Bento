@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import Comments from './comments';
 
-import { requestComments, deleteComment } from '../actions/comment_actions';
+import { requestComments, deleteComment, createComment } from '../actions/comment_actions';
 import { selectComments } from '../reducers/selectors';
 
 
@@ -17,7 +17,8 @@ const mapDispatchToProps = dispatch => {
   // debugger
   return {
     requestComments: projectId => dispatch(requestComments(projectId)),
-    deleteComment: commentId => dispatch(deleteComment(commentId))
+    deleteComment: commentId => dispatch(deleteComment(commentId)),
+    createComment: comment => dispatch(createComment(comment))
   };
 };
 

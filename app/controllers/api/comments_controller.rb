@@ -14,8 +14,11 @@ class Api::CommentsController < ApplicationController
   def index
     if params[:project_id]
       @comments = Project.find(params[:project_id]).comments
+      # @comments = @comments.sort {|c1, c2| c1.id <=> c2.id }
+      # debugger
     else
       @comments = Comment.all
+      # @comments = Comment.find(:all, :order => 'id')
     end
   end
 

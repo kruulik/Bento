@@ -11,6 +11,18 @@ input {
     width: 100%;
 }
 
+textarea {
+  resize: none;
+  background-color: #fff;
+  border: 1px solid #acacac;
+  color: #3b3b3b;
+  font-family: inherit;
+  font-size: 13px;
+  line-height: 1.33;
+  padding: 6px;
+  border-radius: 3px;
+}
+
 fieldset+fieldset {
   margin-top: 8px;
 }
@@ -62,6 +74,11 @@ fieldset+fieldset {
 input:hover {
   border-color: #c2c2c2;
   color: #c2c2c2;
+}
+
+textarea:focus {
+  border-color: #1473e6;
+  // color: inherit;
 }
 
 input:focus {

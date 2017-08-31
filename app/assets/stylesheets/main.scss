@@ -64,3 +64,17 @@ a {
   font-size: 12px;
   padding: 4px 15px;
 }
+
+.avatar-image {
+  border-radius: 50%;
+}
+
+.clearfix:after {
+  clear: both;
+  content: '.';
+  display: block;
+  height: 0;
+  line-height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}

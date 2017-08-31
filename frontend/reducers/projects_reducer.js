@@ -26,7 +26,7 @@ const ProjectsReducer = (state = {}, action) => {
     case RECEIVE_COMMENT:
       nextState = merge({}, state);
       let toAdd = action.comment.id;
-      nextState[action.comment.project_id].comment_ids.unshift(toAdd);
+      nextState[action.comment.project_id].comment_ids.push(toAdd);
       return nextState;
 
     default:
