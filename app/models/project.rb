@@ -11,17 +11,20 @@
 class Project < ApplicationRecord
 
   validates :title, presence: true
-  # do I user_id if I already have ownerships? I'm going to assume that multiple users will have access to editing the same project.
 
   has_many :items, dependent: :destroy
   has_many :ownerships, dependent: :destroy
   has_many :comments, dependent: :destroy
   has_many :likes, dependent: :destroy
+  has_many :taggings, dependent: :destroy
   has_many :likers,
     through: :likes,
-    source: :user 
+    source: :user
   has_many :owners,
     through: :ownerships,
     source: :user
+  has_many :tags,
+    through: :taggings,
+    source: :tag
 
 end

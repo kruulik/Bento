@@ -29,6 +29,16 @@ json.items do
   end
 end
 
+json.tags do
+  @projects.each do |project|
+    project.tags.each do |tag|
+      json.set! tag.id do
+        json.partial! 'api/tags/tag', tag: tag
+      end
+    end
+  end
+end
+
 # json.comments do
 #   @projects.each do |project|
 #     project.comments.each do |comment|

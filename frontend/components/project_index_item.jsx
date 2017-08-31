@@ -29,10 +29,10 @@ class ProjectIndexItem extends React.Component {
   }
 
   render () {
-    const { projectOwners, project } = this.props;
+    const { projectOwners, projectTags, project } = this.props;
     let owners, ownerList;
 
-
+    debugger
 
     if ( projectOwners.length > 1 ) {
       ownerList = projectOwners.map((owner, idx) => {

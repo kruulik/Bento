@@ -84,3 +84,19 @@ c5 = Comment.create(project_id: p1.id, user_id: user2.id, body: 'user2 comment 1
 c6 = Comment.create(project_id: p1.id, user_id: user2.id, body: 'user2 comment 2')
 c7 = Comment.create(project_id: p1.id, user_id: user2.id, body: 'user2 comment 3')
 c8 = Comment.create(project_id: p1.id, user_id: user2.id, body: 'user2 comment 4')
+
+Tag.destroy_all
+t1 = Tag.create(tag: 'Architecture')
+t2 = Tag.create(tag: 'Art Direction')
+t3 = Tag.create(tag: 'Branding')
+t4 = Tag.create(tag: 'Fashion')
+t5 = Tag.create(tag: 'Graphic Design')
+t6 = Tag.create(tag: 'Illustration')
+t7 = Tag.create(tag: 'Industrial Design')
+t8 = Tag.create(tag: 'Interaction Design')
+t9 = Tag.create(tag: 'Motion Graphics')
+t10 = Tag.create(tag: 'Photography')
+t11 = Tag.create(tag: 'UI / UX')
+t12 = Tag.create(tag: 'Web Design')
+
+Tagging.destroy_all

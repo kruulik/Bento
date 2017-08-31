@@ -7,12 +7,14 @@ export const selectOwners = (state, project) => {
 };
 
 export const selectItems = (state, project) => {
-  // debugger
   return project.item_ids.map(id => state.items[id]);
 };
 
 export const selectComments = (state, project) => {
-  // debugger
   return project.comment_ids.map(id => state.comments[id]);
+};
 
+export const selectTags = (state, project) => {
+  debugger
+  return project.tags.map(id => state.tags[id]);
 };

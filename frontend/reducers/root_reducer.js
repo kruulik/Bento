@@ -4,13 +4,15 @@ import ProjectsReducer from './projects_reducer';
 import UsersReducer from './users_reducer';
 import ItemsReducer from './items_reducer';
 import CommentsReducer from './comments_reducer';
+import TagReducer from './tag_reducer';
 
 const rootReducer = combineReducers({
   session: SessionReducer,
   projects: ProjectsReducer,
   users: UsersReducer,
   items: ItemsReducer,
-  comments: CommentsReducer
+  comments: CommentsReducer,
+  tags: TagReducer
 });
 
 export default rootReducer;
