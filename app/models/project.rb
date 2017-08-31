@@ -16,6 +16,10 @@ class Project < ApplicationRecord
   has_many :items, dependent: :destroy
   has_many :ownerships, dependent: :destroy
   has_many :comments, dependent: :destroy
+  has_many :likes, dependent: :destroy
+  has_many :likers,
+    through: :likes,
+    source: :user 
   has_many :owners,
     through: :ownerships,
     source: :user

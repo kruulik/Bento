@@ -5,8 +5,10 @@ import { selectOwners } from '../reducers/selectors';
 
 const mapStateToProps = (state, ownProps) => {
   const project = ownProps.project;
+  // debugger
   return {
     projectOwners: selectOwners(state, project),
+    likes: project.likes.length
     // state
   };
 };

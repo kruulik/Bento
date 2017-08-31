@@ -2,6 +2,7 @@ json.projects do
   @projects.each do |project|
     json.set! project.id do
       json.partial! 'api/projects/project', project: project
+      json.likes project.likers.map(&:id)
     end
   end
 end

@@ -29,6 +29,10 @@ class User < ApplicationRecord
 
   has_many :ownerships, dependent: :destroy
   has_many :comments, dependent: :destroy
+  has_many :likes
+  has_many :liked_project,
+    through: :likes,
+    source: :project
 
   attr_reader :password
 

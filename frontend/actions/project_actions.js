@@ -11,7 +11,6 @@ export const receiveProjects = ({ projects, owners }) => ({
 export const requestProjects = dispatch => {
   return APIUtil.requestProjects()
   .then(projects => {
-    
     dispatch(receiveProjects(projects));
   }
   );

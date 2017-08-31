@@ -66,10 +66,10 @@ class ProjectSidebar extends React.Component {
 
   render() {
     let style = this.state.stickystyle;
-    const {projectOwners, project} = this.props;
+    const {projectOwners, project, likes} = this.props;
     let owners,
       ownerList;
-
+// debugger
     if (projectOwners.length > 1) {
       ownerList = projectOwners.map((owner, idx) => {
 
@@ -100,6 +100,8 @@ class ProjectSidebar extends React.Component {
         <img src={projectOwners[0].avatar_url} className="owner-image medium"/>
       </div>;
     }
+
+
 
     return (
       <div className="project-sidebar">
@@ -132,7 +134,7 @@ class ProjectSidebar extends React.Component {
                 </div>
                 <div className="stats">
                   <span className="views">2000</span>
-                  <span className="likes">200</span>
+                  <span className="likes">{likes}</span>
                   <span className="comments">20</span>
                 </div>
                 <div className="published">

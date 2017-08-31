@@ -23,8 +23,6 @@ class ProjectWrap extends React.Component {
     } else {
 
 
-
-    // debugger
     modules = projectItems.map((item, idx) => {
       if ( item.image_url ) {
         return (

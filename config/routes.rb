@@ -7,11 +7,13 @@ Rails.application.routes.draw do
     resources :projects, only: [:create, :show, :index, :update, :destroy] do
       resources :items, only: [:index, :show]
       resources :comments, only: [:index, :create, :destroy]
+      resources :likes, only: [:show, :create, :destroy]
     end
 
     resources :owners, only: [:create, :show, :index]
     resources :comments, only: [:create, :destroy, :index]
     resources :items, only: [:index, :show]
+    resources :likes, only: [:create, :destroy]
 
   end
 
