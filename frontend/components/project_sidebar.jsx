@@ -1,4 +1,5 @@
 import React from 'react';
+import AppreciateContainer from './appreciate_container';
 
 class ProjectSidebar extends React.Component {
 
@@ -144,11 +145,8 @@ class ProjectSidebar extends React.Component {
             </div>
             <div className="project-detail-block">
 
-              <div className="button__container menu-item">
-                <div className="form-button appreciate">
-                  <span className="button__label">Appreciate Project</span>
-                </div>
-              </div>
+              <AppreciateContainer project={ project } type="a" />
+
             </div>
           </div>
         </div>
@@ -158,5 +156,3 @@ class ProjectSidebar extends React.Component {
 }
 
 export default ProjectSidebar;
-
-// className={'project-info ' + this.state.pos}
