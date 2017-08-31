@@ -35,11 +35,13 @@ class Comments extends React.Component {
   }
 
   render() {
+
     let comments,
       commentForm,
       commentAction;
     const {projectComments, state, deleteComment} = this.props;
     const {currentUser} = this.props.state.session;
+    // debugger
     if (!state.session.currentUser) {
       commentForm = (
         <div className="post-comment-logged-out">
@@ -52,7 +54,7 @@ class Comments extends React.Component {
         <div className="comment-post-container clearfix">
 
           <Link className="user-avatar" to={`/api/users/${state.session.currentUser.id}`}>
-            <img className="avatar-image" src={state.users[state.session.currentUser.id].avatar_url}/>
+            <img className="avatar-image" src={state.session.currentUser.avatar_url}/>
           </Link>
 
           <div className="comment-post">
