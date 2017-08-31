@@ -22,6 +22,14 @@ a {
   color: #0064dc;
 }
 
+.material-icons.md-16 {
+  font-size: 16px;
+}
+
+.material-icons.md-24 {
+  font-size: 24px;
+}
+
 .page-action {
   // this applies to h1 in form
   color: #4b4b4b;
@@ -42,6 +50,7 @@ a {
 }
 
 .button__container {
+
   background: #0057ff;
   border-radius: 50px;
   box-sizing: border-box;
@@ -52,6 +61,7 @@ a {
   transition-property: background, color;
   transition-timing-function: linear;
 }
+
 
 .form-button {
   color: #fff;
@@ -78,4 +88,17 @@ a {
   line-height: 0;
   overflow: hidden;
   visibility: hidden;
+}
+
+.thanks {
+  background: #fff;
+  border: 1px solid #e8e8e8;
+}
+
+.thanks .form-button {
+  color: #191919;
+}
+
+.button__container.thanks:hover {
+  background: #F1F1FB;
 }

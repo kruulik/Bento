@@ -64,11 +64,13 @@ class ProjectIndexItem extends React.Component {
       </div>;
     }
 
-
+    // debugger
     return (
       <div >
         <div className="project-card">
-          <div className="thumb" onClick={this.openModal}></div>
+          <div className="thumb" onClick={this.openModal}>
+            <img className="project-image"/>
+          </div>
           <div className="details">
             <div onClick={this.openModal} className="title">{this.props.project.title} </div>
             {owners}
@@ -85,7 +87,7 @@ class ProjectIndexItem extends React.Component {
           <div className="project-wrapper">
             <ProjectSidebarContainer project={ project } />
             <ProjectWrapContainer project={ project } />
-            
+
           </div>
         </Modal>
       </div>

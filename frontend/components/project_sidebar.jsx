@@ -1,5 +1,10 @@
 import React from 'react';
 import AppreciateContainer from './appreciate_container';
+import MdIconPack from 'react-icons/lib/md';
+import MdRemoveRedEye from 'react-icons/lib/md/remove-red-eye';
+import MdChatBubble from 'react-icons/lib/md/chat-bubble';
+import MdThumbUp from 'react-icons/lib/md/thumb-up';
+
 
 class ProjectSidebar extends React.Component {
 
@@ -103,7 +108,6 @@ class ProjectSidebar extends React.Component {
     }
 
 
-
     return (
       <div className="project-sidebar">
         <div className="stickycontainer">
@@ -134,9 +138,15 @@ class ProjectSidebar extends React.Component {
                   </span>
                 </div>
                 <div className="stats">
-                  <span className="views">2000</span>
-                  <span className="likes">{likes}</span>
-                  <span className="comments">20</span>
+                  <span className="views">
+                    <MdRemoveRedEye />0
+                  </span>
+                  <span className="likes">
+                    <MdThumbUp />{likes}
+                  </span>
+                  <span className="comments">
+                    <MdChatBubble />{this.props.project.comment_ids.length}
+                  </span>
                 </div>
                 <div className="published">
                   <span className="timestamp">Published: Aug24, 2017**</span>

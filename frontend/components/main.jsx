@@ -26,7 +26,7 @@ class Main extends React.Component {
       <div className="site-content">
         <Switch>
           <Route path="/discover" component={DiscoverContainer} />
-          <Route path="/" exact component={DiscoverContainer} />
+          <Route path="/" component={DiscoverContainer} />
         </Switch>
       </div>
     </div>

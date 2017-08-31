@@ -59,36 +59,36 @@
   }
 
   .stats > span {
-    margin-right: 6px;
+    margin-right: 10px;
     color: dimgray;
     line-height: 20px;
     height: 20px;
   }
 
-  .views:before {
-    content: "|||||";
+  .views svg {
+    content: "remove-red-eye";
     color: dimgray;
     font-size: 16px;
     height: 16px;
     width: 16px;
-    margin-right: 3px;
+    margin-right: 5px;
   }
 
-  .likes:before {
-    content: "|||||";
+  .likes svg {
+    content: "";
     color: dimgray;
     font-size: 16px;
     height: 16px;
     width: 16px;
-    margin-right: 3px;
+    margin-right: 5px;
   }
-  .comments:before {
-    content: "|||||";
+  .comments svg {
+    content: "&#xE0CA;";
     color: dimgray;
     font-size: 16px;
     height: 16px;
     width: 16px;
-    margin-right: 3px;
+    margin-right: 5px;
   }
 
   .published {

@@ -41,6 +41,7 @@ class Comments extends React.Component {
       commentAction;
     const {projectComments, state, deleteComment} = this.props;
     const {currentUser} = this.props.state.session;
+
     // debugger
     if (!state.session.currentUser) {
       commentForm = (
@@ -137,7 +138,7 @@ class Comments extends React.Component {
     return (
 
       <div className="comments-block">
-        <h3 className="project-block-header">Comments</h3>
+        <h3 className="project-block-header">Comments ({this.props.projectComments.length})</h3>
         {commentForm}
         <div>
           <ul className="comments-list">
