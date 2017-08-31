@@ -12,6 +12,11 @@ class ProjectWrap extends React.Component {
     this.props.requestItems(this.props.project.id);
   }
 
+  componentWillUnmount(){
+    this.props.clearItems();
+    this.props.clearComments();
+  }
+
   render() {
     // debugger
 

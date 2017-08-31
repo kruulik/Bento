@@ -1,7 +1,8 @@
 import { connect } from 'react-redux';
 import ProjectWrap from './project_wrap';
 
-import { requestItems } from '../actions/item_actions';
+import { requestItems, clearItems } from '../actions/item_actions';
+import { clearComments } from '../actions/comment_actions';
 import { selectItems } from '../reducers/selectors';
 
 
@@ -15,7 +16,9 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    requestItems: projectId => dispatch(requestItems(projectId))
+    requestItems: projectId => dispatch(requestItems(projectId)),
+    clearItems: () => dispatch(clearItems()),
+    clearComments: () => dispatch(clearComments()),
   };
 };
 

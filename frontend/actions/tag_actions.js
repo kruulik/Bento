@@ -25,9 +25,13 @@ export const receiveTagging = tagging => ({
   tagging
 });
 
+// export const getTags = projectId => dispatch => (
+//   APIUtil.getTags(projectId).then(
+//     tags => dispatch(receiveTags(tags))
+// ));
 
-export const getTags = projectId => dispatch => (
-  APIUtil.getTags(projectId).then(
+export const getTags = () => dispatch => (
+  APIUtil.getAllTags().then(
     tags => dispatch(receiveTags(tags))
 ));
 

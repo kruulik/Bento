@@ -30,13 +30,13 @@ json.items do
 end
 
 json.tags do
-  @projects.each do |project|
-    project.tags.each do |tag|
+
+    Tag.all.each do |tag|
       json.set! tag.id do
         json.partial! 'api/tags/tag', tag: tag
       end
     end
-  end
+
 end
 
 # json.comments do

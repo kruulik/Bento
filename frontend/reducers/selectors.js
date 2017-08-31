@@ -14,7 +14,8 @@ export const selectComments = (state, project) => {
   return project.comment_ids.map(id => state.comments[id]);
 };
 
+export const allTags = state => values(state.tags);
+
 export const selectTags = (state, project) => {
-  debugger
   return project.tags.map(id => state.tags[id]);
 };

@@ -6,6 +6,13 @@ export const createTag = tag => (
   })
 );
 
+export const requestTags = () => (
+  $.ajax({
+    method: 'GET',
+    url: '/api/tags'
+  })
+);
+
 export const createTagging = tagging => (
   $.ajax({
     method: 'POST',

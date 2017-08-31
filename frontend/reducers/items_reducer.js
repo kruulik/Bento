@@ -1,5 +1,6 @@
 import {
-  RECEIVE_ITEMS
+  RECEIVE_ITEMS,
+  CLEAR_ITEMS
 } from '../actions/item_actions';
 import {
   merge
@@ -7,10 +8,11 @@ import {
 
 const ItemsReducer = (state = {}, action) => {
   Object.freeze(state);
-// debugger
   switch (action.type) {
     case RECEIVE_ITEMS:
       return merge({}, state, action.items);
+    case CLEAR_ITEMS:
+      return {};
     default:
       return state;
   }

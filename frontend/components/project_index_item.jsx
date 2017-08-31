@@ -32,7 +32,7 @@ class ProjectIndexItem extends React.Component {
     const { projectOwners, projectTags, project } = this.props;
     let owners, ownerList;
 
-    debugger
+    // debugger
 
     if ( projectOwners.length > 1 ) {
       ownerList = projectOwners.map((owner, idx) => {
@@ -74,6 +74,13 @@ class ProjectIndexItem extends React.Component {
           <div className="details">
             <div onClick={this.openModal} className="title">{this.props.project.title} </div>
             {owners}
+          </div>
+          <div className="fields">
+            <ul className="fields-list">
+              <li className="field">
+                <span>{projectTags[0]}</span>
+              </li>
+            </ul>
           </div>
         </div>
 
