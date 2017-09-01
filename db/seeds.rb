@@ -8,7 +8,7 @@
 
 User.destroy_all
 karolis = User.create(f_name: 'Karolis', l_name: 'Krulis', email: 'karoliskrulis@gmail.com', password: 'password', bio: 'Designer & Developer', avatar: File.new("#{Rails.root}/app/assets/images/avatars/Karolis.jpeg"))
-andrewK = User.create(f_name: 'Andrew', l_name: 'Kay', email: 'kayandrewj@gmail.com', password: 'go_user_go', bio: 'Developer', avatar: File.new("#{Rails.root}/app/assets/images/avatars/Andrew_kay.jpeg"))
+andrewK = User.create(f_name: 'Andrew', l_name: 'Kay', email: 'kayandrewj@gmail.com', password: 'go_user_go', bio: 'Developer', avatar: File.new("#{Rails.root}/app/assets/images/avatars/Andrew_Kay.jpeg"))
 anthonyR = User.create(f_name: 'Anthony', l_name: 'Rondinone', email: 'a.rondinone@gmail.com', password: 'go_user_go', bio: 'Developer', avatar: File.new("#{Rails.root}/app/assets/images/avatars/Anthony_R.jpeg"))
 jonathanL = User.create(f_name: 'Jonathan', l_name: 'Liu', email: 'jonathan.liu137@gmail.com', password: 'go_user_go', bio: 'Developer', avatar: File.new("#{Rails.root}/app/assets/images/avatars/Jonathan_Liu.jpeg"))
 edcarl = User.create(f_name: 'Edcarl', l_name: 'Adraincem', email: 'edcarl.adraincem@gmail.com', password: 'go_user_go', bio: 'Developer', avatar: File.new("#{Rails.root}/app/assets/images/avatars/Edcarl.jpeg"))
