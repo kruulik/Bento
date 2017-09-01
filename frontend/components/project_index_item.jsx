@@ -4,6 +4,10 @@ import Modal from 'react-modal';
 import ModalStyle from './modal_style.js';
 import ProjectWrapContainer from './project_wrap_container';
 import ProjectSidebarContainer from './project_sidebar_container';
+import MdIconPack from 'react-icons/lib/md';
+import MdRemoveRedEye from 'react-icons/lib/md/remove-red-eye';
+import MdChatBubble from 'react-icons/lib/md/chat-bubble';
+import MdThumbUp from 'react-icons/lib/md/thumb-up';
 
 
 class ProjectIndexItem extends React.Component {
@@ -30,7 +34,8 @@ class ProjectIndexItem extends React.Component {
 
   render () {
     const { projectOwners, project, projectTags } = this.props;
-    let owners, ownerList;
+    let owners, ownerList, likes;
+    likes = project.likes;
 
 // debugger
     if ( projectOwners.length > 1 ) {
@@ -80,7 +85,15 @@ class ProjectIndexItem extends React.Component {
                 </li>
               </ul>
             </div>
-          </div>  
+            <div className="stats">
+              <span className="likes">
+                <MdThumbUp />{likes.length}
+              </span>
+              <span className="comments">
+                <MdChatBubble />{this.props.project.comment_ids.length}
+              </span>
+            </div>
+          </div>
         </div>
 
         <Modal
@@ -91,8 +104,8 @@ class ProjectIndexItem extends React.Component {
           contentLabel="Project Modal"
           className='modal-wrap'>
           <div className="project-wrapper">
-            <ProjectSidebarContainer project={ project } />
-            <ProjectWrapContainer project={ project } />
+            <ProjectSidebarContainer project={ project } projectTags={ projectTags }/>
+            <ProjectWrapContainer project={ project } projectTags={ projectTags }/>
 
           </div>
         </Modal>

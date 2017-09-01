@@ -4,6 +4,7 @@ import MdIconPack from 'react-icons/lib/md';
 import MdRemoveRedEye from 'react-icons/lib/md/remove-red-eye';
 import MdChatBubble from 'react-icons/lib/md/chat-bubble';
 import MdThumbUp from 'react-icons/lib/md/thumb-up';
+import moment from 'moment';
 
 
 class ProjectSidebar extends React.Component {
@@ -72,9 +73,9 @@ class ProjectSidebar extends React.Component {
 
   render() {
     let style = this.state.stickystyle;
-    const {projectOwners, project, likes} = this.props;
+    const {projectOwners, project, likes, projectTags} = this.props;
     let owners,
-      ownerList;
+      ownerList, fields;
 // debugger
     if (projectOwners.length > 1) {
       ownerList = projectOwners.map((owner, idx) => {
@@ -108,6 +109,16 @@ class ProjectSidebar extends React.Component {
     }
 
 
+    fields = projectTags.map((tag, idx) => {
+      return (
+        <li className="field">
+          <span>{tag.tag}, </span>
+        </li>
+      );
+    });
+
+
+// debugger
     return (
       <div className="project-sidebar">
         <div className="stickycontainer">
@@ -130,12 +141,9 @@ class ProjectSidebar extends React.Component {
                   {this.props.project.title}
                 </div>
                 <div className="fields">
-                  <span className="field">Photography*
-                  </span>
-                  <span className="field">Branding*
-                  </span>
-                  <span className="field">Graphic Design*
-                  </span>
+                  <ul className="fields-list">
+                    {fields}
+                  </ul>
                 </div>
                 <div className="stats">
                   <span className="views">
@@ -149,7 +157,7 @@ class ProjectSidebar extends React.Component {
                   </span>
                 </div>
                 <div className="published">
-                  <span className="timestamp">Published: Aug24, 2017**</span>
+                  <span className="timestamp">Published: {moment(project.createdOn).format("MMMM Do, YYYY")}</span>
                 </div>
               </div>
             </div>

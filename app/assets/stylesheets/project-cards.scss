@@ -172,12 +172,37 @@
 
 .fields {
   height: 23px;
+  display: inline-block;
 }
 
 .fields-list {
   margin: 2px 0 6px;
+  display: inline;
 }
 
 .field {
-  font-size: 11px; 
+  font-size: 11px;
+  display: inline;
+}
+
+.stats {
+  border-top: 1px #f2f2f2 solid;
+  display: flex;
+  align-items: center;
+  padding: 7px 0;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.stats span {
+  margin-right: 13px;
+}
+
+.stats span svg {
+  margin-right: 7px;
+  content: "";
+  color: #a4a4a4;
+  font-size: 16px;
+  height: 16px;
+  width: 16px;
 }

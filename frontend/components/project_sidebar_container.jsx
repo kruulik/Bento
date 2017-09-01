@@ -5,18 +5,12 @@ import { selectOwners } from '../reducers/selectors';
 
 const mapStateToProps = (state, ownProps) => {
   const project = ownProps.project;
-  // debugger
+  const projectTags = ownProps.projectTags;
   return {
     projectOwners: selectOwners(state, project),
-    likes: project.likes.length
-    // state
+    likes: project.likes.length,
+    projectTags
   };
 };
-
-// const mapDispatchToProps = dispatch => {
-//   return {
-//     requestOwners: () => dispatch(requestOwners)
-//   };
-// };
 
 export default connect(mapStateToProps, null)(ProjectSidebar);
