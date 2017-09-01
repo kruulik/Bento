@@ -6,7 +6,15 @@ Bentö is a web-app clone of the popular design and artwork showcase platform Be
 
 ### Project Ownerships
 
-Projects can belong to more than one user, and this is demonstrated on the frontend by rendering either the single owner's name, or a list of multiple owners. 
+Projects can belong to more than one user, and this is demonstrated on the frontend by rendering either the single owner's name, or a list of multiple owners.
+
+### Tags
+
+Projects can have tags from a finite list of possible tags ('fields'). Tags are rendered both in the project card, and project sidebar.
+
+### Likes
+
+Projects can only be likes, after which the like button becomes inactive and displays a new state. Total likes are rendered on the project sidebar and card.
 
 ### Modals
 
