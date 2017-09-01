@@ -24,7 +24,7 @@ class User < ApplicationRecord
 
   after_initialize :ensure_session_token
 
-  has_attached_file :avatar, default_url: "default_avatar.jpg"
+  has_attached_file :avatar, styles: {mini: "20X20#", small: "50X50#", medium: "100X100#"}, default_url: "default_avatar.jpg"
   validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\z/
 
   has_many :ownerships, dependent: :destroy

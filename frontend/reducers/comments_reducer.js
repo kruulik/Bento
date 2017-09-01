@@ -13,9 +13,11 @@ const CommentsReducer = (state = {}, action) => {
   let nextState;
   switch (action.type) {
     case RECEIVE_COMMENTS:
-    return merge({}, state, action.comments);
+      return merge({}, state, action.comments);
     case RECEIVE_COMMENT:
-      return merge({}, state, {[action.comment.id]: action.comment});
+      return merge({}, state, {
+        [action.comment.id]: action.comment
+      });
     case REMOVE_COMMENT:
 
       nextState = merge({}, state);

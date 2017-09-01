@@ -10,7 +10,7 @@ body {
   background: #f9f9f9;
   font-size: 14px;
   font-weight: normal;
-  // height: 100vh;
+  min-height: calc(100vh - 60px);
 }
 
 h1 {

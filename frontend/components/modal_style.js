@@ -34,7 +34,10 @@ const ModalStyle = {
     opacity                    : 1,
     transition                 : 'opacity 0.4s',
     position                   : 'relative',
-    boxSizing                  : 'border-box'
+    boxSizing                  : 'border-box',
+    maxWidth                   : '1400px',
+    marginLeft                 : 'auto',
+    marginRight                : 'auto'
   }
 
 };

@@ -63,6 +63,7 @@ class ProjectIndexItem extends React.Component {
         </div>
       );
     } else {
+      // debugger
       owners = <div className="owners">
         {projectOwners[0].f_name + " " + projectOwners[0].l_name}
       </div>;

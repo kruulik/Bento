@@ -83,7 +83,6 @@ class Comments extends React.Component {
     } else {
 
       // sorting before map causes my list of comments to switch order every time a letter is typed into the form!
-
       comments = projectComments.slice().reverse().map((comment, idx) => {
         if (!comment) {
           return (null);
@@ -102,6 +101,7 @@ class Comments extends React.Component {
             <div className="comment-action"></div>
           );
         }
+        // debugger
         return (
           <li className="user-comment clearfix" key={idx}>
             <Link className="user-avatar" to={`/api/users/${comment.user_id}`}>

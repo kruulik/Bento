@@ -7,83 +7,124 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.destroy_all
-guest = User.create(f_name: 'Karolis', l_name: 'Krulis', email: 'karoliskrulis@gmail.com', password: 'password', bio: 'Designer & Developer')
-user2 = User.create(f_name: 'Bob', l_name: 'Bo', email: 'bobby@gmail.com', password: 'password', bio: 'Blob')
-user3 = User.create(f_name: 'John', l_name: 'Doe', email: 'John@gmail.com', password: 'password', bio: 'Blob')
-user4 = User.create(f_name: 'Jannet', l_name: 'Jackson', email: 'Jannet@gmail.com', password: 'password', bio: 'Blob')
+karolis = User.create(f_name: 'Karolis', l_name: 'Krulis', email: 'karoliskrulis@gmail.com', password: 'password', bio: 'Designer & Developer', avatar: File.new("#{Rails.root}/app/assets/images/avatars/Karolis.jpeg"))
+andrewK = User.create(f_name: 'Andrew', l_name: 'Kay', email: 'kayandrewj@gmail.com', password: 'go_user_go', bio: 'Developer', avatar: File.new("#{Rails.root}/app/assets/images/avatars/Andrew_kay.jpeg"))
+anthonyR = User.create(f_name: 'Anthony', l_name: 'Rondinone', email: 'a.rondinone@gmail.com', password: 'go_user_go', bio: 'Developer', avatar: File.new("#{Rails.root}/app/assets/images/avatars/Anthony_R.jpeg"))
+jonathanL = User.create(f_name: 'Jonathan', l_name: 'Liu', email: 'jonathan.liu137@gmail.com', password: 'go_user_go', bio: 'Developer', avatar: File.new("#{Rails.root}/app/assets/images/avatars/Jonathan_Liu.jpeg"))
+edcarl = User.create(f_name: 'Edcarl', l_name: 'Adraincem', email: 'edcarl.adraincem@gmail.com', password: 'go_user_go', bio: 'Developer', avatar: File.new("#{Rails.root}/app/assets/images/avatars/Edcarl.jpeg"))
+
+
 
 Project.destroy_all
-p1 = Project.create(title: 'Project_1', thumbnail: File.new("#{Rails.root}/app/assets/images/project-items.png"))
-p2 = Project.create(title: 'Project_2')
-p3 = Project.create(title: 'Project_3')
-p4 = Project.create(title: 'Project_4')
-p5 = Project.create(title: 'Project_5')
-p6 = Project.create(title: 'Project_6')
-p7 = Project.create(title: 'Project_7')
-p8 = Project.create(title: 'Project_8')
-p9 = Project.create(title: 'Project_9')
+p1 = Project.create(title: 'Bentö', thumbnail: File.new("#{Rails.root}/app/assets/images/bn/b_1.jpg"))
+p2 = Project.create(title: 'Branding for Tutoring Service', thumbnail: File.new("#{Rails.root}/app/assets/images/ga/ga_1.png"))
+p3 = Project.create(title: 'Project Expedition', thumbnail: File.new("#{Rails.root}/app/assets/images/pe/pe_a.png"))
+p4 = Project.create(title: 'Wing and a Prayer Farm', thumbnail: File.new("#{Rails.root}/app/assets/images/wa/wa_1.jpg"))
+p5 = Project.create(title: 'artHouse', thumbnail: File.new("#{Rails.root}/app/assets/images/ah/ah_a.png"))
+p6 = Project.create(title: 'AUX', thumbnail: File.new("#{Rails.root}/app/assets/images/au/au_a.png"))
+p7 = Project.create(title: 'Ask()', thumbnail: File.new("#{Rails.root}/app/assets/images/ask/ask_a.png"))
+p8 = Project.create(title: 'Jewelry Photography', thumbnail: File.new("#{Rails.root}/app/assets/images/ak_i/2.jpg"))
+p9 = Project.create(title: 'Jewelry Photography Posters', thumbnail: File.new("#{Rails.root}/app/assets/images/ak_p/a.jpg"))
+p10 = Project.create(title: 'readRSS', thumbnail: File.new("#{Rails.root}/app/assets/images/rss/rss_a.png"))
+
 
 Ownership.destroy_all
-o1 = Ownership.create(user_id: guest.id, project_id: p1.id)
-o2 = Ownership.create(user_id: guest.id, project_id: p2.id)
-o3 = Ownership.create(user_id: user2.id, project_id: p2.id)
-o4 = Ownership.create(user_id: user2.id, project_id: p3.id)
-o5 = Ownership.create(user_id: user3.id, project_id: p3.id)
-o5 = Ownership.create(user_id: user3.id, project_id: p4.id)
-o6 = Ownership.create(user_id: user4.id, project_id: p5.id)
-o6 = Ownership.create(user_id: user4.id, project_id: p6.id)
-o6 = Ownership.create(user_id: user4.id, project_id: p7.id)
-o6 = Ownership.create(user_id: user4.id, project_id: p8.id)
-o6 = Ownership.create(user_id: user4.id, project_id: p9.id)
+o1 = Ownership.create(user_id: karolis.id, project_id: p1.id)
+o2 = Ownership.create(user_id: karolis.id, project_id: p2.id)
+o3 = Ownership.create(user_id: karolis.id, project_id: p3.id)
+o4 = Ownership.create(user_id: karolis.id, project_id: p4.id)
+o5 = Ownership.create(user_id: anthonyR.id, project_id: p5.id)
+o6 = Ownership.create(user_id: andrewK.id, project_id: p6.id)
+o7 = Ownership.create(user_id: jonathanL.id, project_id: p7.id)
+o8 = Ownership.create(user_id: karolis.id, project_id: p8.id)
+o9 = Ownership.create(user_id: karolis.id, project_id: p9.id)
+o10 = Ownership.create(user_id: edcarl.id, project_id: p10.id)
+
 
 Item.destroy_all
-i1 = Item.create(project_id: p1.id, body: 'THE TOKYO RESTAURANT.')
-i2 = Item.create(project_id: p1.id, body: 'The Tokyo Restaurant. is a Japanese restaurant & bar in Kuala Lumpur, Malaysia. The restaurant offers contemporary dining experience of mixed genres, all with a hint of Japanese twists. ')
-i3 = Item.create(project_id: p1.id, body: 'The key concept for the identity is “marriage of authenticity and light-heartedness.” Classic typefaces were chosen to create an authentic atmosphere for the brand, while the abstracted monogram adds a contemporary, approachable look to the logo.​​​​​​​')
-i3 = Item.create(project_id: p1.id, body: ' ​​​​')
+i1a = Item.create(project_id: p1.id, body: 'BENTÖ')
+i1b = Item.create(project_id: p1.id, body: 'Why Bentö? Because bento is modular. ')
+i1c = Item.create(project_id: p1.id, body: 'Bento (弁当 bentō)[1] is a single-portion take-out or home-packed meal common in Japanese cuisine. A traditional bento holds rice or noodles, fish or meat, with pickled and cooked vegetables, in a box.[2] Containers range from disposable mass-produced to hand-crafted lacquerware. Bentos are readily available in many places throughout Japan, including convenience stores, bento shops (弁当屋 bentō-ya), railway stations, and department stores. However, Japanese homemakers often spend time and energy on a carefully prepared lunch box for their spouse, child, or themselves.​​​​​​​')
+i1d = Item.create(project_id: p1.id, body: ' ​​​​')
+i1e = Item.create(project_id: p1.id, body: 'It\'s also delicious... ​and so is my code.')
+i1f = Item.create(project_id: p1.id, body: ' ​​​​')
 
-i1 = Item.create(project_id: p1.id, image: File.new("#{Rails.root}/app/assets/images/project-items.png"))
-i2 = Item.create(project_id: p1.id, image: File.new("#{Rails.root}/app/assets/images/project-items2.png"))
-i3 = Item.create(project_id: p1.id, image: File.new("#{Rails.root}/app/assets/images/project-items3.png"))
-i1b = Item.create(project_id: p1.id, body: 'This is another section of text, with a spacer div below it!.')
-i3b = Item.create(project_id: p1.id, body: ' ​​​​')
-i4 = Item.create(project_id: p1.id, image: File.new("#{Rails.root}/app/assets/images/project-items4.png"))
-i5 = Item.create(project_id: p1.id, image: File.new("#{Rails.root}/app/assets/images/project-items5.png"))
+i1g = Item.create(project_id: p1.id, image: File.new("#{Rails.root}/app/assets/images/bn/b_1.jpg"))
+i1h = Item.create(project_id: p1.id, image: File.new("#{Rails.root}/app/assets/images/bn/b_2.jpg"))
+i1i = Item.create(project_id: p1.id, image: File.new("#{Rails.root}/app/assets/images/bn/b_2.jpg"))
+
 
 # ###################
 # PROJECT 2
 
+i2a = Item.create(project_id: p2.id, image: File.new("#{Rails.root}/app/assets/images/ga/ga_1.png"))
+i2b = Item.create(project_id: p2.id, image: File.new("#{Rails.root}/app/assets/images/ga/ga_2.png"))
+i2c = Item.create(project_id: p2.id, image: File.new("#{Rails.root}/app/assets/images/ga/ga_3.png"))
 
-i6 = Item.create(project_id: p2.id, image: File.new("#{Rails.root}/app/assets/images/project-items6.png"))
-i7 = Item.create(project_id: p2.id, image: File.new("#{Rails.root}/app/assets/images/project-items7.png"))
-i8 = Item.create(project_id: p2.id, image: File.new("#{Rails.root}/app/assets/images/project-items8.png"))
-i9 = Item.create(project_id: p2.id, image: File.new("#{Rails.root}/app/assets/images/project-items9.png"))
-i10 = Item.create(project_id: p2.id, image: File.new("#{Rails.root}/app/assets/images/project-items10.png"))
 
-# ###################
-# PROJECT 3
+i3a = Item.create(project_id: p3.id, image: File.new("#{Rails.root}/app/assets/images/pe/pe_1.png"))
+i3b = Item.create(project_id: p3.id, image: File.new("#{Rails.root}/app/assets/images/pe/pe_2.png"))
+i3c = Item.create(project_id: p3.id, image: File.new("#{Rails.root}/app/assets/images/pe/pe_3.png"))
 
-i11 = Item.create(project_id: p3.id, image: File.new("#{Rails.root}/app/assets/images/project-items11.png"))
-i12 = Item.create(project_id: p3.id, image: File.new("#{Rails.root}/app/assets/images/project-items12.png"))
-i13 = Item.create(project_id: p3.id, image: File.new("#{Rails.root}/app/assets/images/project-items13.png"))
-i14 = Item.create(project_id: p3.id, image: File.new("#{Rails.root}/app/assets/images/project-items14.png"))
-i15 = Item.create(project_id: p3.id, image: File.new("#{Rails.root}/app/assets/images/project-items15.png"))
-i16 = Item.create(project_id: p3.id, body: 'Heyyy and heres some more text, with TWO (user generated) spacers beneath it!.')
+i4a = Item.create(project_id: p4.id, image: File.new("#{Rails.root}/app/assets/images/wa/wa_1.jpg"))
+i4b = Item.create(project_id: p4.id, image: File.new("#{Rails.root}/app/assets/images/wa/wa_2.jpg"))
+i4c = Item.create(project_id: p4.id, image: File.new("#{Rails.root}/app/assets/images/wa/wa_3.jpg"))
+i4d = Item.create(project_id: p4.id, image: File.new("#{Rails.root}/app/assets/images/wa/wa_4.jpg"))
+i4e = Item.create(project_id: p4.id, image: File.new("#{Rails.root}/app/assets/images/wa/wa_5.jpg"))
 
-i16b = Item.create(project_id: p3.id, body: ' ')
+i5a = Item.create(project_id: p5.id, image: File.new("#{Rails.root}/app/assets/images/ah/SignUp.png"))
+i5b = Item.create(project_id: p5.id, image: File.new("#{Rails.root}/app/assets/images/ah/Login.png"))
+i5c = Item.create(project_id: p5.id, image: File.new("#{Rails.root}/app/assets/images/ah/Feed.png"))
+i5d = Item.create(project_id: p5.id, image: File.new("#{Rails.root}/app/assets/images/ah/UserShow.png"))
+i5e = Item.create(project_id: p5.id, image: File.new("#{Rails.root}/app/assets/images/ah/UserEdit.png"))
+i5f = Item.create(project_id: p5.id, image: File.new("#{Rails.root}/app/assets/images/ah/PostShowModal.png"))
 
-i16c = Item.create(project_id: p3.id, body: ' ')
+i6a = Item.create(project_id: p6.id, image: File.new("#{Rails.root}/app/assets/images/au/HomePage.png"))
+i6a = Item.create(project_id: p6.id, image: File.new("#{Rails.root}/app/assets/images/au/ArtistShowPage.png"))
+i6a = Item.create(project_id: p6.id, image: File.new("#{Rails.root}/app/assets/images/au/AlbumShowPage.png"))
+i6a = Item.create(project_id: p6.id, image: File.new("#{Rails.root}/app/assets/images/au/UserShowPage.png"))
+
+i7a = Item.create(project_id: p7.id, image: File.new("#{Rails.root}/app/assets/images/ask/home-container.png"))
+i7b = Item.create(project_id: p7.id, image: File.new("#{Rails.root}/app/assets/images/ask/login-page.png"))
+i7c = Item.create(project_id: p7.id, image: File.new("#{Rails.root}/app/assets/images/ask/question-detail-container.png"))
+i7d = Item.create(project_id: p7.id, image: File.new("#{Rails.root}/app/assets/images/ask/topic_question_index_container.png"))
+
+i8a = Item.create(project_id: p8.id, image: File.new("#{Rails.root}/app/assets/images/ak_i/1.jpg"))
+i8b = Item.create(project_id: p8.id, image: File.new("#{Rails.root}/app/assets/images/ak_i/2.jpg"))
+i8c = Item.create(project_id: p8.id, image: File.new("#{Rails.root}/app/assets/images/ak_i/3.jpg"))
+i8d = Item.create(project_id: p8.id, image: File.new("#{Rails.root}/app/assets/images/ak_i/4.jpg"))
+i8e = Item.create(project_id: p8.id, image: File.new("#{Rails.root}/app/assets/images/ak_i/5.jpg"))
+i8f = Item.create(project_id: p8.id, image: File.new("#{Rails.root}/app/assets/images/ak_i/6.jpg"))
+
+i9a = Item.create(project_id: p9.id, image: File.new("#{Rails.root}/app/assets/images/ak_p/a.jpg"))
+i9b = Item.create(project_id: p9.id, image: File.new("#{Rails.root}/app/assets/images/ak_p/b.jpg"))
+
+i10a = Item.create(project_id: p10.id, image: File.new("#{Rails.root}/app/assets/images/rss/sign_up.png"))
+i10a = Item.create(project_id: p10.id, image: File.new("#{Rails.root}/app/assets/images/rss/login.png"))
+i10a = Item.create(project_id: p10.id, image: File.new("#{Rails.root}/app/assets/images/rss/feed_collection.png"))
+i10a = Item.create(project_id: p10.id, image: File.new("#{Rails.root}/app/assets/images/rss/feed_all.png"))
+
+
+
+
 
 
 Comment.destroy_all
-c1 = Comment.create(project_id: p1.id, user_id: guest.id, body: 'guest comment 1')
-c2 = Comment.create(project_id: p1.id, user_id: guest.id, body: 'guest comment 2')
-c3 = Comment.create(project_id: p1.id, user_id: guest.id, body: 'guest comment 3')
-c4 = Comment.create(project_id: p1.id, user_id: guest.id, body: 'guest comment 4')
-c5 = Comment.create(project_id: p1.id, user_id: user2.id, body: 'user2 comment 1')
-c6 = Comment.create(project_id: p1.id, user_id: user2.id, body: 'user2 comment 2')
-c7 = Comment.create(project_id: p1.id, user_id: user2.id, body: 'user2 comment 3')
-c8 = Comment.create(project_id: p1.id, user_id: user2.id, body: 'user2 comment 4')
+c1 = Comment.create(project_id: p1.id, user_id: anthonyR.id, body: 'Yum')
+c2 = Comment.create(project_id: p1.id, user_id: andrewK.id, body: 'Great pun dude!')
+c3 = Comment.create(project_id: p1.id, user_id: karolis.id, body: 'Looks Good!')
+c4 = Comment.create(project_id: p4.id, user_id: karolis.id, body: 'Yay farm animals')
+c5 = Comment.create(project_id: p3.id, user_id: edcarl.id, body: 'What is UX?')
+c6 = Comment.create(project_id: p9.id, user_id: jonathanL.id, body: 'Shiny')
+c7 = Comment.create(project_id: p8.id, user_id: edcarl.id, body: 'So shiny')
+c8 = Comment.create(project_id: p8.id, user_id: anthonyR.id, body: 'Much Dazzle')
+c9 = Comment.create(project_id: p1.id, user_id: anthonyR.id, body: 'Great Work!')
+c10 = Comment.create(project_id: p6.id, user_id: jonathanL.id, body: 'Neat')
+c11 = Comment.create(project_id: p7.id, user_id: edcarl.id, body: 'Cool!')
+c12 = Comment.create(project_id: p8.id, user_id: edcarl.id, body: 'Fuzzy')
+c13 = Comment.create(project_id: p4.id, user_id: andrewK.id, body: 'Hey this looks like Wisconsin!')
+
+
 
 Tag.destroy_all
 t1 = Tag.create(tag: 'Architecture')
@@ -101,42 +142,70 @@ t12 = Tag.create(tag: 'Web Design')
 
 Tagging.destroy_all
 
-tg1 = Tagging.create(project_id: p1.id, tag_id: t1.id)
-tg2 = Tagging.create(project_id: p2.id, tag_id: t5.id)
-tg3 = Tagging.create(project_id: p3.id, tag_id: t11.id)
-tg4 = Tagging.create(project_id: p4.id, tag_id: t12.id)
-tg5 = Tagging.create(project_id: p5.id, tag_id: t12.id)
-tg6 = Tagging.create(project_id: p6.id, tag_id: t12.id)
-tg7 = Tagging.create(project_id: p7.id, tag_id: t12.id)
-tg8 = Tagging.create(project_id: p8.id, tag_id: t12.id)
-tg9 = Tagging.create(project_id: p9.id, tag_id: t12.id)
+tg1a = Tagging.create(project_id: p1.id, tag_id: t5.id)
+tg1b = Tagging.create(project_id: p1.id, tag_id: t6.id)
+tg1c = Tagging.create(project_id: p1.id, tag_id: t11.id)
+tg1d = Tagging.create(project_id: p1.id, tag_id: t12.id)
 
-tg1b = Tagging.create(project_id: p1.id, tag_id: t12.id)
-tg2b = Tagging.create(project_id: p2.id, tag_id: t12.id)
-tg3b = Tagging.create(project_id: p3.id, tag_id: t12.id)
-tg4b = Tagging.create(project_id: p4.id, tag_id: t12.id)
-tg5b = Tagging.create(project_id: p5.id, tag_id: t12.id)
-tg6b = Tagging.create(project_id: p6.id, tag_id: t12.id)
-tg7b = Tagging.create(project_id: p7.id, tag_id: t12.id)
-tg8b = Tagging.create(project_id: p8.id, tag_id: t12.id)
-tg9b = Tagging.create(project_id: p9.id, tag_id: t12.id)
-
-tg1b = Tagging.create(project_id: p1.id, tag_id: t11.id)
-tg2b = Tagging.create(project_id: p2.id, tag_id: t11.id)
-tg3b = Tagging.create(project_id: p3.id, tag_id: t11.id)
-tg4b = Tagging.create(project_id: p4.id, tag_id: t11.id)
-tg5b = Tagging.create(project_id: p5.id, tag_id: t11.id)
-tg6b = Tagging.create(project_id: p6.id, tag_id: t11.id)
-tg7b = Tagging.create(project_id: p7.id, tag_id: t11.id)
-tg8b = Tagging.create(project_id: p8.id, tag_id: t11.id)
-tg9b = Tagging.create(project_id: p9.id, tag_id: t11.id)
-
-tg1b = Tagging.create(project_id: p1.id, tag_id: t5.id)
+tg2a = Tagging.create(project_id: p2.id, tag_id: t3.id)
 tg2b = Tagging.create(project_id: p2.id, tag_id: t5.id)
+tg2c = Tagging.create(project_id: p2.id, tag_id: t6.id)
+tg2d = Tagging.create(project_id: p2.id, tag_id: t11.id)
+
+tg3a = Tagging.create(project_id: p3.id, tag_id: t3.id)
 tg3b = Tagging.create(project_id: p3.id, tag_id: t5.id)
-tg4b = Tagging.create(project_id: p4.id, tag_id: t5.id)
-tg5b = Tagging.create(project_id: p5.id, tag_id: t5.id)
-tg6b = Tagging.create(project_id: p6.id, tag_id: t5.id)
-tg7b = Tagging.create(project_id: p7.id, tag_id: t5.id)
-tg8b = Tagging.create(project_id: p8.id, tag_id: t5.id)
-tg9b = Tagging.create(project_id: p9.id, tag_id: t5.id)
+tg3c = Tagging.create(project_id: p3.id, tag_id: t6.id)
+tg3d = Tagging.create(project_id: p3.id, tag_id: t11.id)
+
+tg4a = Tagging.create(project_id: p4.id, tag_id: t10.id)
+
+tg5a = Tagging.create(project_id: p5.id, tag_id: t12.id)
+tg5b = Tagging.create(project_id: p5.id, tag_id: t11.id)
+tg5c = Tagging.create(project_id: p5.id, tag_id: t6.id)
+tg5d = Tagging.create(project_id: p5.id, tag_id: t5.id)
+
+tg6a = Tagging.create(project_id: p6.id, tag_id: t12.id)
+tg6b = Tagging.create(project_id: p6.id, tag_id: t11.id)
+tg6c = Tagging.create(project_id: p6.id, tag_id: t6.id)
+tg6d = Tagging.create(project_id: p6.id, tag_id: t5.id)
+
+tg7a = Tagging.create(project_id: p7.id, tag_id: t12.id)
+tg7b = Tagging.create(project_id: p7.id, tag_id: t11.id)
+tg7c = Tagging.create(project_id: p7.id, tag_id: t6.id)
+tg7d = Tagging.create(project_id: p7.id, tag_id: t5.id)
+
+tg8a = Tagging.create(project_id: p8.id, tag_id: t10.id)
+
+tg9a = Tagging.create(project_id: p9.id, tag_id: t10.id)
+
+tg10a = Tagging.create(project_id: p10.id, tag_id: t12.id)
+tg10b = Tagging.create(project_id: p10.id, tag_id: t11.id)
+tg10c = Tagging.create(project_id: p10.id, tag_id: t6.id)
+tg10d = Tagging.create(project_id: p10.id, tag_id: t5.id)
+
+
+Like.destroy_all
+
+l1a = Like.create(user_id: karolis.id, project_id: p1.id)
+l2a = Like.create(user_id: andrewK.id, project_id: p1.id)
+l3a = Like.create(user_id: anthonyR.id, project_id: p1.id)
+l4a = Like.create(user_id: edcarl.id, project_id: p1.id)
+l5a = Like.create(user_id: jonathanL.id, project_id: p1.id)
+
+l1b = Like.create(user_id: karolis.id, project_id: p2.id)
+l2b = Like.create(user_id: andrewK.id, project_id: p3.id)
+l3b = Like.create(user_id: anthonyR.id, project_id: p5.id)
+l4b = Like.create(user_id: edcarl.id, project_id: p6.id)
+l5b = Like.create(user_id: jonathanL.id, project_id: p7.id)
+
+l1c = Like.create(user_id: karolis.id, project_id: p3.id)
+l2c = Like.create(user_id: andrewK.id, project_id: p5.id)
+l3c = Like.create(user_id: anthonyR.id, project_id: p7.id)
+l4c = Like.create(user_id: edcarl.id, project_id: p4.id)
+l5c = Like.create(user_id: jonathanL.id, project_id: p3.id)
+
+l1c = Like.create(user_id: karolis.id, project_id: p5.id)
+l2c = Like.create(user_id: andrewK.id, project_id: p7.id)
+l3c = Like.create(user_id: anthonyR.id, project_id: p3.id)
+l4c = Like.create(user_id: edcarl.id, project_id: p8.id)
+l5c = Like.create(user_id: jonathanL.id, project_id: p5.id)

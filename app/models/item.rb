@@ -20,7 +20,7 @@ class Item < ApplicationRecord
   # validates :body, presence: true, unless: :image?
   validate :body_if_no_image
 
-  has_attached_file :image, default_url: ''
+  has_attached_file :image, styles: { medium: "1400X" }, default_url: ''
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
   belongs_to :project

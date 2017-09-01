@@ -32,7 +32,7 @@ class ProjectWrap extends React.Component {
       if ( item.image_url ) {
         return (
           <div key={idx} className="project-module image-module">
-            <img className="image" src={item.image_url}/>
+            <img className="image medium" src={item.image_url}/>
           </div>
         );
       } else {

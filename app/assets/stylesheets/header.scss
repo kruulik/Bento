@@ -107,11 +107,13 @@
 }
 
 .profile .name {
+  display: block;
   font-weight: bold;
   font-size: 18px;
 }
 
 .profile .email {
+  display: block;
   color: dimgray;
   font-size: 13px;
 }
@@ -151,7 +153,7 @@
     width: auto;
     height: 26px;
     margin-right: 6px;
-    margin-bottom: 2px; 
+    margin-bottom: 2px;
   }
 }
 

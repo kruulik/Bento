@@ -1,5 +1,5 @@
 import React from 'react';
-import {Switch, Route, Link} from 'react-router-dom';
+import {Switch, Route, Link, Redirect} from 'react-router-dom';
 import HeaderContainer from './header_container';
 import DiscoverContainer from './discover_container';
 
@@ -26,7 +26,7 @@ class Main extends React.Component {
       <div className="site-content">
         <Switch>
           <Route path="/discover" component={DiscoverContainer} />
-          <Route path="/" exact component={DiscoverContainer} />
+          <Route path="/" exact render={() => <Redirect to="/discover" />} />
         </Switch>
       </div>
     </div>
