@@ -40,6 +40,13 @@ o8 = Ownership.create(user_id: karolis.id, project_id: p8.id)
 o9 = Ownership.create(user_id: karolis.id, project_id: p9.id)
 o10 = Ownership.create(user_id: edcarl.id, project_id: p10.id)
 
+o11 = Ownership.create(user_id: karolis.id, project_id: p5.id)
+o12 = Ownership.create(user_id: karolis.id, project_id: p6.id)
+o13 = Ownership.create(user_id: edcarl.id, project_id: p6.id)
+o14 = Ownership.create(user_id: anthonyR.id, project_id: p8.id)
+
+
+
 
 Item.destroy_all
 i1a = Item.create(project_id: p1.id, body: 'BENTÖ')
