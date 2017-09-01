@@ -72,9 +72,8 @@ class ProjectIndexItem extends React.Component {
     return (
       <div >
         <div className="project-card">
-          <div className="thumb" onClick={this.openModal}>
-            <img className="project-image"/>
-          </div>
+          <img className="thumb" onClick={this.openModal} src={this.props.project.thumbnail_url}/>
+
           <div className="details">
             <div onClick={this.openModal} className="title">{this.props.project.title} </div>
             {owners}

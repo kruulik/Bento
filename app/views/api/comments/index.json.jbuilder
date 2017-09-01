@@ -12,6 +12,7 @@ json.comments do
       json.createdOn comment.created_at
       # json.username comment.user.f_name
       # json.user_avatar comment.user.avatar
+      json.avatar asset_path(comment.user.avatar.url)
     end
   end
 end

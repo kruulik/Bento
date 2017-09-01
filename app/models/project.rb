@@ -12,6 +12,9 @@ class Project < ApplicationRecord
 
   validates :title, presence: true
 
+  has_attached_file :thumbnail, styles: { thumb: "202X158>" }, default_url: ""
+  validates_attachment_content_type :thumbnail, content_type: /\Aimage\/.*\z/
+
   has_many :items, dependent: :destroy
   has_many :ownerships, dependent: :destroy
   has_many :comments, dependent: :destroy

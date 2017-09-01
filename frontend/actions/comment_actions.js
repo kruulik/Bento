@@ -9,14 +9,15 @@ export const receiveComments = ({ comments, errors}) => {
 // debugger
 return   ({
   type: RECEIVE_COMMENTS,
-  comments,
-  errors
-});};
-
-export const receiveComment = comment => ({
-  type: RECEIVE_COMMENT,
-  comment
+  comments
 });
+};
+
+export const receiveComment = comment => {
+debugger
+  return (type: RECEIVE_COMMENT,
+  comment);
+};
 
 export const removeComment = comment => ({
   type: REMOVE_COMMENT,
@@ -39,6 +40,10 @@ export const createComment = comment => dispatch => (
   APIUtil.postComment(comment)
     .then(comment => dispatch(receiveComment(comment)))
 );
+// export const createComment = comment => dispatch => (
+//   APIUtil.postComment(comment)
+//     .then(comments => dispatch(receiveComments(comments)))
+// );
 
 export const deleteComment = comment => dispatch => (
   APIUtil.deleteComment(comment.id)

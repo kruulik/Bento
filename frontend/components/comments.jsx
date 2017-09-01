@@ -81,11 +81,9 @@ class Comments extends React.Component {
         </div>
       );
     } else {
-      //
-      //
-      //
-      //
+
       // sorting before map causes my list of comments to switch order every time a letter is typed into the form!
+
       comments = projectComments.slice().reverse().map((comment, idx) => {
         if (!comment) {
           return (null);
@@ -107,7 +105,7 @@ class Comments extends React.Component {
         return (
           <li className="user-comment clearfix" key={idx}>
             <Link className="user-avatar" to={`/api/users/${comment.user_id}`}>
-              <img className="avatar-image" src={state.users[comment.user_id].avatar_url}/>
+              <img className="avatar-image" src={comment.avatar}/>
             </Link>
             <div className="comment-text-container">
               <div className="comment-user-date">

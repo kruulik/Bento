@@ -1,7 +1,7 @@
 import {
   RECEIVE_COMMENTS,
   RECEIVE_COMMENT,
-  REMOVE_COMMENT, 
+  REMOVE_COMMENT,
   CLEAR_COMMENTS
 } from '../actions/comment_actions';
 import {
@@ -15,7 +15,6 @@ const CommentsReducer = (state = {}, action) => {
     case RECEIVE_COMMENTS:
     return merge({}, state, action.comments);
     case RECEIVE_COMMENT:
-
       return merge({}, state, {[action.comment.id]: action.comment});
     case REMOVE_COMMENT:
 

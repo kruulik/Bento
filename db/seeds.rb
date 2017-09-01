@@ -13,7 +13,7 @@ user3 = User.create(f_name: 'John', l_name: 'Doe', email: 'John@gmail.com', pass
 user4 = User.create(f_name: 'Jannet', l_name: 'Jackson', email: 'Jannet@gmail.com', password: 'password', bio: 'Blob')
 
 Project.destroy_all
-p1 = Project.create(title: 'Project_1')
+p1 = Project.create(title: 'Project_1', thumbnail: File.new("#{Rails.root}/app/assets/images/project-items.png"))
 p2 = Project.create(title: 'Project_2')
 p3 = Project.create(title: 'Project_3')
 p4 = Project.create(title: 'Project_4')
