@@ -73,7 +73,7 @@ i4d = Item.create(project_id: p4.id, image: File.new("#{Rails.root}/app/assets/i
 i4e = Item.create(project_id: p4.id, image: File.new("#{Rails.root}/app/assets/images/wa/wa_5.jpg"))
 
 i5a = Item.create(project_id: p5.id, image: File.new("#{Rails.root}/app/assets/images/ah/SignUp.png"))
-i5b = Item.create(project_id: p5.id, image: File.new("#{Rails.root}/app/assets/images/ah/Login.png"))
+i5b = Item.create(project_id: p5.id, image: File.new("#{Rails.root}/app/assets/images/ah/LogIn.png"))
 i5c = Item.create(project_id: p5.id, image: File.new("#{Rails.root}/app/assets/images/ah/Feed.png"))
 i5d = Item.create(project_id: p5.id, image: File.new("#{Rails.root}/app/assets/images/ah/UserShow.png"))
 i5e = Item.create(project_id: p5.id, image: File.new("#{Rails.root}/app/assets/images/ah/UserEdit.png"))
