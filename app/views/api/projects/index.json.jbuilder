@@ -18,39 +18,23 @@ json.owners do
   end
 end
 
-json.items do
-  @projects.each do |project|
-    project.items.each do |item|
-      json.set! item.id do
-        json.image_url asset_path(item.image.url)
-        json.extract! item, :id, :body, :project_id
-      end
-    end
-  end
-end
-
-json.tags do
-
-    Tag.all.each do |tag|
-      json.set! tag.id do
-        json.partial! 'api/tags/tag', tag: tag
-      end
-    end
-
-end
-
-# json.comments do
+# json.items do
 #   @projects.each do |project|
-#     project.comments.each do |comment|
-#       json.set! comment.id do
-#         # json.extract! comment, :id, :body, :project_id, :user_id
-#         json.id comment.id
-#         json.body comment.body
-#         json.user_id comment.user_id
-#         json.project_id comment.project_id
-#         json.username (comment.user.f_name + ' ' + comment.user.l_name)
-#         json.user_avatar comment.user.avatar
+#     project.items.each do |item|
+#       json.set! item.id do
+#         json.image_url asset_path(item.image.url)
+#         json.extract! item, :id, :body, :project_id
 #       end
 #     end
 #   end
 # end
+
+json.tags do
+  @projects.each do |project|
+    project.tags.each do |tag|
+      json.set! tag.id do
+        json.partial! 'api/tags/tag', tag: tag
+      end
+    end
+  end
+end

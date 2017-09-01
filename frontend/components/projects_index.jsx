@@ -5,8 +5,8 @@ import ProjectIndexItemContainer from './project_index_item_container';
 class ProjectsIndex extends React.Component {
 
   componentDidMount() {
-    this.props.requestProjects();
-    // this.props.requestTags();
+    this.props.requestProjects().then(
+    this.props.requestTags());
   }
 
   handleScroll(){
@@ -15,8 +15,9 @@ class ProjectsIndex extends React.Component {
 
 
   render () {
+    // debugger
     const { allProjects } = this.props;
-
+// debugger
     return (
       <div className="projects-grid" onScroll={this.handleScroll}>
 

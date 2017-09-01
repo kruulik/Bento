@@ -10,14 +10,14 @@ const mapStateToProps = state => {
 // debugger
   return {
     allProjects: selectAllProjects(state),
-    // allTags: allTags(state)
   };
 };
 
 const mapDispatchToProps = dispatch => {
+  // debugger
   return {
     requestProjects: () => dispatch(requestProjects),
-    // requestTags: () => dispatch(requestTags)
+    requestTags: () => dispatch(requestTags)
   };
 };
 

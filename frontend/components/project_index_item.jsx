@@ -29,11 +29,10 @@ class ProjectIndexItem extends React.Component {
   }
 
   render () {
-    const { projectOwners, projectTags, project } = this.props;
+    const { projectOwners, project, projectTags } = this.props;
     let owners, ownerList;
 
-    // debugger
-
+// debugger
     if ( projectOwners.length > 1 ) {
       ownerList = projectOwners.map((owner, idx) => {
         // debugger
@@ -74,14 +73,14 @@ class ProjectIndexItem extends React.Component {
           <div className="details">
             <div onClick={this.openModal} className="title">{this.props.project.title} </div>
             {owners}
-          </div>
-          <div className="fields">
-            <ul className="fields-list">
-              <li className="field">
-                <span>{projectTags[0]}</span>
-              </li>
-            </ul>
-          </div>
+            <div className="fields">
+              <ul className="fields-list">
+                <li className="field">
+                  <span>{projectTags[0].tag}</span>
+                </li>
+              </ul>
+            </div>
+          </div>  
         </div>
 
         <Modal
