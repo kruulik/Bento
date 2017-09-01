@@ -8,7 +8,6 @@ class ProjectWrap extends React.Component {
   }
 
   componentDidMount() {
-    // debugger
     this.props.requestItems(this.props.project.id);
   }
 
@@ -18,7 +17,6 @@ class ProjectWrap extends React.Component {
   }
 
   render() {
-    // debugger
 
     let modules;
     const { projectItems, project } = this.props;
@@ -45,7 +43,6 @@ class ProjectWrap extends React.Component {
 
 
     });
-    // debugger
     return (
     <div className="project-container">
       <div className="project-canvas">

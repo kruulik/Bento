@@ -6,7 +6,6 @@ export const REMOVE_TAG = 'REMOVE_TAG';
 export const RECEIVE_TAGGING = "RECEIVE_TAGGING";
 
 export const receiveTags = tags => {
-// debugger
   return ({
   type: RECEIVE_TAGS,
   tags

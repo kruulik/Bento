@@ -37,10 +37,8 @@ class ProjectIndexItem extends React.Component {
     let owners, ownerList, likes;
     likes = project.likes;
 
-// debugger
     if ( projectOwners.length > 1 ) {
       ownerList = projectOwners.map((owner, idx) => {
-        // debugger
         return (
         <div key={idx} className="owner">
           <span className="owner-image-container">
@@ -63,13 +61,10 @@ class ProjectIndexItem extends React.Component {
         </div>
       );
     } else {
-      // debugger
       owners = <div className="owners">
         {projectOwners[0].f_name + " " + projectOwners[0].l_name}
       </div>;
     }
-
-    // debugger
     return (
       <div >
         <div className="project-card">

@@ -3,10 +3,8 @@ import Appreciate from './appreciate';
 
 
 const mapStateToProps = (state, ownProps) => {
-  // debugger
   const project_id = ownProps.project.id;
   const type = ownProps.type;
-  // debugger
   return {
     user: state.session.currentUser,
     project_id,

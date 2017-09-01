@@ -14,7 +14,6 @@ const mapStateToProps = (state, ownProps) => {
 };
 
 const mapDispatchToProps = dispatch => {
-  // debugger
   return {
     requestComments: projectId => dispatch(requestComments(projectId)),
     deleteComment: commentId => dispatch(deleteComment(commentId)),

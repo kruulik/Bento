@@ -8,14 +8,12 @@ import { requestTags } from '../actions/tag_actions';
 import { selectAllProjects } from '../reducers/selectors';
 
 const mapStateToProps = state => {
-// debugger
   return {
     allProjects: selectAllProjects(state),
   };
 };
 
 const mapDispatchToProps = dispatch => {
-  // debugger
   return {
     requestProjects: () => dispatch(requestProjects),
     requestTags: () => dispatch(requestTags)

@@ -9,17 +9,10 @@ class ProjectsIndex extends React.Component {
     this.props.requestTags());
   }
 
-  handleScroll(){
-    console.log('scrolling');
-  }
-
-
   render () {
-    // debugger
     const { allProjects } = this.props;
-// debugger
     return (
-      <div className="projects-grid" onScroll={this.handleScroll}>
+      <div className="projects-grid" >
 
         { allProjects.map(project => <ProjectIndexItemContainer key={project.id} project={ project } />) }
         <div className="flex-spacer"></div>

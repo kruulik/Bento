@@ -76,7 +76,6 @@ class ProjectSidebar extends React.Component {
     const {projectOwners, project, likes, projectTags} = this.props;
     let owners,
       ownerList, fields;
-// debugger
     if (projectOwners.length > 1) {
       ownerList = projectOwners.map((owner, idx) => {
 
@@ -120,8 +119,6 @@ class ProjectSidebar extends React.Component {
       );
     });
 
-
-// debugger
     return (
       <div className="project-sidebar">
         <div className="stickycontainer">

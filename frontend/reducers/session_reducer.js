@@ -33,7 +33,6 @@ const SessionReducer = (state = nullUser, action) => {
     case CLEAR_ERRORS:
       return Object.assign({}, state, {errors: []});
     case LIKE:
-    // debugger
       let nextState = merge({}, state);
       nextState.currentUser.likes.push(action.like.project_id);
       return nextState;

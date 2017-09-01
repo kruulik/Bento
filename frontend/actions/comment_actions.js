@@ -6,7 +6,6 @@ export const REMOVE_COMMENT = 'REMOVE_COMMENT';
 export const CLEAR_COMMENTS = 'CLEAR_COMMENTS';
 
 export const receiveComments = ({ comments, errors}) => {
-// debugger
 return   ({
   type: RECEIVE_COMMENTS,
   comments
@@ -14,7 +13,6 @@ return   ({
 };
 
 export const receiveComment = comment => {
-// debugger
   return ({type: RECEIVE_COMMENT,
   comment});
 };

@@ -15,7 +15,6 @@ export const clearItems = () => {
 };
 
 export const requestItems = projectId => dispatch => {
-  // debugger
   return APIUtil.requestItems(projectId)
   .then(items => dispatch(receiveItems(items))
   );

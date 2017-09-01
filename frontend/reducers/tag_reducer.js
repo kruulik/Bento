@@ -12,16 +12,13 @@ const TagReducer = (state = {}, action) => {
   let newState;
   switch (action.type) {
     case RECEIVE_TAGS:
-      // debugger
       return action.tags;
     case RECEIVE_TAG:
-      // debugger
       newState = {
         [action.tag.id]: action.tag
       };
       return merge({}, state, newTag);
     case REMOVE_TAG:
-    // debugger
       newState = merge({}, state);
       delete newState[action.tag];
       return merge({}, newState);

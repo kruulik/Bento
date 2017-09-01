@@ -15,7 +15,6 @@ class Appreciate extends React.Component {
   handleClick() {
     let {project_id, user, likeProject, unlikeProject} = this.props;
     if (!user) {
-      // debugger
       this.props.history.push('/signup');
     } else {
       const user_id = user.id;

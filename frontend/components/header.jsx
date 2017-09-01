@@ -14,7 +14,6 @@ class Header extends React.Component {
     );
     let sessionAction, mainMenu;
     if (this.props.currentUser) {
-      // debugger
     sessionAction = (
       <div className = "session-actions">
         <div className="user-profile-action">

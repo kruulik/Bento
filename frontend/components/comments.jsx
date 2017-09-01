@@ -101,7 +101,6 @@ class Comments extends React.Component {
             <div className="comment-action"></div>
           );
         }
-        // debugger
         return (
           <li className="user-comment clearfix" key={idx}>
             <Link className="user-avatar" to={`/api/users/${comment.user_id}`}>

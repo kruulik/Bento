@@ -6,7 +6,6 @@ import { selectAllProjects, selectOwners, selectTags } from '../reducers/selecto
 
 const mapStateToProps = (state, ownProps) => {
   const project = ownProps.project;
-  // debugger
   return {
     projectOwners: selectOwners(state, project),
     projectTags: selectTags(state, project),
@@ -17,7 +16,6 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = dispatch => {
   return {
     requestOwners: () => dispatch(requestOwners),
-    // requestTags: projectId => dispatch(requestItems(projectId))
   };
 };
 
