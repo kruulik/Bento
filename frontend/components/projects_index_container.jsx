@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import { logout } from '../actions/session_actions';
 import ProjectsIndex from './projects_index';
+import { withRouter } from 'react-router-dom';
 
 import { requestProjects } from '../actions/project_actions';
 import { requestTags } from '../actions/tag_actions';
@@ -21,4 +22,4 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(ProjectsIndex);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(ProjectsIndex));

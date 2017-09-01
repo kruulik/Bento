@@ -42,7 +42,6 @@ class Comments extends React.Component {
     const {projectComments, state, deleteComment} = this.props;
     const {currentUser} = this.props.state.session;
 
-    // debugger
     if (!state.session.currentUser) {
       commentForm = (
         <div className="post-comment-logged-out">
@@ -50,7 +49,6 @@ class Comments extends React.Component {
         </div>
       );
     } else {
-      // debugger
       commentForm = (
         <div className="comment-post-container clearfix">
 
@@ -88,7 +86,6 @@ class Comments extends React.Component {
       //
       //
       // sorting before map causes my list of comments to switch order every time a letter is typed into the form!
-
       comments = projectComments.slice().reverse().map((comment, idx) => {
         if (!comment) {
           return (null);
@@ -107,7 +104,6 @@ class Comments extends React.Component {
             <div className="comment-action"></div>
           );
         }
-
         return (
           <li className="user-comment clearfix" key={idx}>
             <Link className="user-avatar" to={`/api/users/${comment.user_id}`}>
@@ -134,7 +130,6 @@ class Comments extends React.Component {
         );
       });
     }
-    // debugger
     return (
 
       <div className="comments-block">

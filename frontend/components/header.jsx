@@ -1,6 +1,8 @@
 import React from 'react';
 import { Switch, Link, NavLink} from 'react-router-dom';
 import DiscoverContainer from './discover_container';
+import MdIconPack from 'react-icons/lib/md';
+import MdPowerSettingsNew from 'react-icons/lib/md/power-settings-new';
 
 class Header extends React.Component {
 
@@ -13,25 +15,23 @@ class Header extends React.Component {
     let sessionAction, mainMenu;
     if (this.props.currentUser) {
       // debugger
-    sessionAction = ([
+    sessionAction = (
       <div className = "session-actions">
         <div className="user-profile-action">
           <img className="avatar thumb-small" src={this.props.currentUser.avatar_url} />
           <span className="tooltip-container">
             <div className="tooltip">
-              <div className="profile">
+              <div className="profile clearfix">
                 <img className="avatar thumb-med" src={this.props.currentUser.avatar_url} />
-                <span>{this.props.currentUser.f_name}</span>
-                <span>{this.props.currentUser.email}</span>
+                <span className="name">{this.props.currentUser.f_name}</span>
+                <span className="email">{this.props.currentUser.email}</span>
               </div>
-              <div className="submenu">
-                <button onClick = {this.props.logout}>Log Out</button>
-              </div>
+              <button className="sign-out-button" onClick = {this.props.logout}><MdPowerSettingsNew />Sign Out</button>
             </div>
           </span>
         </div>
       </div>
-    ]);
+    );
 
     mainMenu = (
       <ul className="main-menu">
@@ -63,7 +63,7 @@ class Header extends React.Component {
             <span className="button__label">Sign Up With Email</span>
           </Link>
         </div>
-        <Link className="link menu-item" activeStyle={{ color: 'red' }} to="/login"> Log In </Link>
+        <Link className="link menu-item" to="/login"> Log In </Link>
 
       </div>
       );

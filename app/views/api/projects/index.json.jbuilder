@@ -18,6 +18,7 @@ json.owners do
   end
 end
 
+
 # json.items do
 #   @projects.each do |project|
 #     project.items.each do |item|

@@ -60,7 +60,7 @@ class SessionForm extends React.Component {
     }
 
     const fields = (
-      [
+
       <fieldset className="names">
         <div className="grid_1">
           <input type="text" id="f_name" value={this.state.f_name}
@@ -73,10 +73,10 @@ class SessionForm extends React.Component {
         </div>
       </fieldset>
 
-      ]
+
     );
     return (
-      <div className="form-container">
+      <div className="form-container" >
         <div className="page-action">
           <h1>{header}</h1>
         </div>

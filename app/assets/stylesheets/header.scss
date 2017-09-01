@@ -101,13 +101,31 @@
 .tooltip .profile {
   padding: 10px 20px 20px;
   width: 280px;
+  border-bottom: 1px solid #e8e8e8;
+  display: block;
+  margin: 0 -10px 10px;
+}
+
+.profile .name {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.profile .email {
+  color: dimgray;
+  font-size: 13px;
+}
+
+.tooltip .profile span {
+  display: inline-block;
 }
 
 .avatar.thumb-med {
   height: 65px;
   width: 65px;
   margin-right: 14px;
-  border-radius: 50%
+  border-radius: 50%;
+  float: left;
 }
 
 .main-menu {
@@ -115,4 +133,41 @@
   text-align: center;
   width: calc(100% - 500px);
   display: block;
+}
+
+.profile-submenu {
+  padding: 10px 20px;
+}
+.sign-out-button {
+  width: calc(100% + 20px);
+  text-align: left;
+  padding: 5px 10px 5px 20px;
+  color: dimgray;
+  margin-left: -10px;
+  margin-right: -10px;
+  font-size: 14px;
+  svg {
+    font-size: 20px;
+    width: auto;
+    height: 26px;
+    margin-right: 6px;
+    margin-bottom: 2px; 
+  }
+}
+
+.sign-out-button:hover {
+  transition-duration: .1s;
+  transition-property: color;
+  transition-timing-function: linear;
+  background-color: #f2f2f2;
+}
+
+.clearfix:after {
+  clear: both;
+  content: '.';
+  display: block;
+  height: 0;
+  line-height: 0;
+  overflow: hidden;
+  visibility: hidden;
 }

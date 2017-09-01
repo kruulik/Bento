@@ -102,16 +102,19 @@ class ProjectSidebar extends React.Component {
         </div>
       );
     } else {
-      owners = <div className="owners">
-        <div className="name">{projectOwners[0].f_name + " " + projectOwners[0].l_name}</div>
-        <img src={projectOwners[0].avatar_url} className="owner-image medium"/>
-      </div>;
+      owners = (
+        <div className="owners">
+          <div className="name">{projectOwners[0].f_name + " " + projectOwners[0].l_name}</div>
+          <img src={projectOwners[0].avatar_url} className="owner-image medium"/>
+        </div>
+      );
+
     }
 
 
     fields = projectTags.map((tag, idx) => {
       return (
-        <li className="field">
+        <li className="field" key={idx}>
           <span>{tag.tag}, </span>
         </li>
       );
