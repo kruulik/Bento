@@ -14,8 +14,8 @@ following criteria with smooth, bug-free navigation, adequate seed data and suff
 - [X] New account creation, login, and guest/demo login
 - [X] Project Viewing
 - [X] Explore Projects
-- [ ] Likes
-- [ ] Comments
+- [X] Likes
+- [X] Comments
 
 ## Design Docs
 * [View Wireframes][wireframes]
@@ -50,7 +50,7 @@ following criteria with smooth, bug-free navigation, adequate seed data and suff
 **Objective:** Each user has a profile showcasing their projects.
 
 ### Bonus Features (TBD)
-- [ ] Tags
+- [X] Tags
 - [ ] Follows
 - [ ] Appreciations (*join tables to display total count on User Profiles.*)
 - [ ] Views (*join tables to display total count on User Profiles.*)
