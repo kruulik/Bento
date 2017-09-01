@@ -9,15 +9,15 @@ import { selectAllProjects } from '../reducers/selectors';
 const mapStateToProps = state => {
 // debugger
   return {
-    allProjects: selectAllProjects(state)
+    allProjects: selectAllProjects(state),
     // allTags: allTags(state)
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
-    requestProjects: () => dispatch(requestProjects)
-    // requestTags: () => dispatch(requestTags)
+    requestProjects: () => dispatch(requestProjects),
+    requestTags: () => dispatch(requestTags)
   };
 };
 

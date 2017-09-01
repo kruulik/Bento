@@ -6,7 +6,7 @@ class ProjectsIndex extends React.Component {
 
   componentDidMount() {
     this.props.requestProjects();
-    // this.props.requestTags();
+    this.props.requestTags();
   }
 
   handleScroll(){
@@ -15,9 +15,8 @@ class ProjectsIndex extends React.Component {
 
 
   render () {
-    const { allProjects, allTags } = this.props;
+    const { allProjects } = this.props;
 
-    // debugger
     return (
       <div className="projects-grid" onScroll={this.handleScroll}>
 
