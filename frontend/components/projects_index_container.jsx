@@ -17,7 +17,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
   return {
     requestProjects: () => dispatch(requestProjects),
-    requestTags: () => dispatch(requestTags)
+    // requestTags: () => dispatch(requestTags)
   };
 };
 

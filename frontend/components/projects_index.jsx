@@ -6,7 +6,7 @@ class ProjectsIndex extends React.Component {
 
   componentDidMount() {
     this.props.requestProjects();
-    this.props.requestTags();
+    // this.props.requestTags();
   }
 
   handleScroll(){
