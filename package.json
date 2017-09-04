@@ -24,6 +24,9 @@
   "bugs": {
     "url": "https://github.com/kruulik/Bento/issues"
   },
+  "devDependencies": {
+    "redux-logger": "^2.8.1"
+  },
   "homepage": "https://github.com/kruulik/Bento#readme",
   "dependencies": {
     "babel-core": "^6.26.0",
