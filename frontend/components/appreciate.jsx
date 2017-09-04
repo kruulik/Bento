@@ -13,7 +13,11 @@ class Appreciate extends React.Component {
   }
 
   handleClick() {
+
     let {project_id, user, likeProject, unlikeProject} = this.props;
+
+
+    debugger
     if (!user) {
       this.props.history.push('/signup');
     } else {
@@ -38,6 +42,7 @@ class Appreciate extends React.Component {
   }
 
   render() {
+
     const {project_id, user, type} = this.props;
 
     let {buttonState} = this.state;

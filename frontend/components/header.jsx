@@ -74,7 +74,7 @@ class Header extends React.Component {
         {logo}
         {mainMenu}
         {sessionAction}
-          <Link className="link menu-item github" to="https://github.com/kruulik/Bento"> GitHub </Link>
+          <a className="link menu-item github" href="https://github.com/kruulik/Bento"> GitHub </a>
       </nav>
     );
 
