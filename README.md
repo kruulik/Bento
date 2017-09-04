@@ -14,11 +14,12 @@ Projects can have tags from a finite list of possible tags ('fields'). Tags are 
 
 ### Likes
 
-Projects can only be likes, after which the like button becomes inactive and displays a new state. Total likes are rendered on the project sidebar and card.
+Projects can only be liked, after which the like button becomes inactive and displays a new state. Total likes are rendered on the project sidebar and card.
 
 ### Modals
 
 Projects are displayed using a react-modal component, which when opened will set overflow: hidden in order to prevent scrolling in the background. This created a challenge when implementing project-sidebar behavior (as per the design on Behance). Sidebar content was selectively positioned flex or absolute, depending on its position in relation the the viewport and tital height of the project modal. Both of these varied depending on the content and scroll distance and needed to be calculated using .getBoundingClientRect().
+Sample of the of the code below: 
 
 ```javascript
 getStickyTop() {
@@ -95,8 +96,7 @@ Will display user's projects and liked projects.
 
 ### Search
 
-Categorizing projects will allow users to search and filter through projects.
-
+Categorizing projects will allow users to search and filter through projects. This will be implemented alongside project search. 
 
 
 
