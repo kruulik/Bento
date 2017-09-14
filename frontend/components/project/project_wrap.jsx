@@ -1,5 +1,5 @@
 import React from 'react';
-import CommentsContainer from './comments_container';
+import CommentsContainer from '../comment/comments_container';
 
 class ProjectWrap extends React.Component {
 

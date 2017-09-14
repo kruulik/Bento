@@ -1,6 +1,6 @@
 import React from 'react';
 import { Switch, Link, NavLink} from 'react-router-dom';
-import DiscoverContainer from './discover_container';
+import DiscoverContainer from '../discover/discover_container';
 import MdIconPack from 'react-icons/lib/md';
 import MdPowerSettingsNew from 'react-icons/lib/md/power-settings-new';
 

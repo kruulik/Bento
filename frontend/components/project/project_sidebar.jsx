@@ -1,5 +1,5 @@
 import React from 'react';
-import AppreciateContainer from './appreciate_container';
+import AppreciateContainer from '../appreciate/appreciate_container';
 import MdIconPack from 'react-icons/lib/md';
 import MdRemoveRedEye from 'react-icons/lib/md/remove-red-eye';
 import MdChatBubble from 'react-icons/lib/md/chat-bubble';

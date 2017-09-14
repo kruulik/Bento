@@ -1,8 +1,8 @@
 import { connect } from 'react-redux';
 import Comments from './comments';
 
-import { requestComments, deleteComment, createComment } from '../actions/comment_actions';
-import { selectComments } from '../reducers/selectors';
+import { requestComments, deleteComment, createComment } from '../../actions/comment_actions';
+import { selectComments } from '../../reducers/selectors';
 
 
 const mapStateToProps = (state, ownProps) => {

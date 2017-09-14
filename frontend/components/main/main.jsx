@@ -1,7 +1,7 @@
 import React from 'react';
 import {Switch, Route, Link, Redirect} from 'react-router-dom';
-import HeaderContainer from './header_container';
-import DiscoverContainer from './discover_container';
+import HeaderContainer from '../header/header_container';
+import DiscoverContainer from '../discover/discover_container';
 
 class Main extends React.Component {
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import ProjectsIndexContainer from './projects_index_container';
+import ProjectsIndexContainer from '../project/projects_index_container';
 
 class Discover extends React.Component {
 

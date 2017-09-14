@@ -1,8 +1,8 @@
 import { connect } from 'react-redux';
 import ProjectIndexItem from './project_index_item';
 
-import { requestProjects, requestOwners } from '../actions/project_actions';
-import { selectAllProjects, selectOwners, selectTags } from '../reducers/selectors';
+import { requestProjects, requestOwners } from '../../actions/project_actions';
+import { selectAllProjects, selectOwners, selectTags } from '../../reducers/selectors';
 
 const mapStateToProps = (state, ownProps) => {
   const project = ownProps.project;

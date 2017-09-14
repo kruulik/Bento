@@ -2,6 +2,8 @@ import { connect } from 'react-redux';
 import Appreciate from './appreciate';
 
 
+import { likeProject } from '../../actions/like_actions';
+
 const mapStateToProps = (state, ownProps) => {
   const project_id = ownProps.project.id;
   const type = ownProps.type;
