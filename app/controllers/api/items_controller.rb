@@ -15,6 +15,10 @@ class Api::ItemsController < ApplicationController
     @items = Project.find(params[:project_id]).items
   end
 
+  def destroy
+    @item.destroy
+  end
+
   private
 
   def item_params

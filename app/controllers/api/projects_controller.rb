@@ -1,5 +1,5 @@
 class Api::ProjectsController < ApplicationController
-  before_action :require_logged_in, only: [:create, :update]
+  before_action :require_logged_in, only: [:create, :update, :destroy]
 
   def create
     @project = Project.new(project_params)
@@ -10,6 +10,10 @@ class Api::ProjectsController < ApplicationController
     else
       render json: ['Unable to create project.'], status: 422
     end
+  end
+
+  def destroy
+    @project.destroy
   end
 
   def show
