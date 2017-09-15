@@ -45,7 +45,7 @@ class Header extends React.Component {
         </li>
         <li className="menu-item">
           <div className="button__container menu-item">
-            <Link className="form-button" to="/signup">
+            <Link className="form-button" to="/projects">
               <span className="button__label">Create a Project</span>
             </Link>
           </div>

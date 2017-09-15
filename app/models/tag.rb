@@ -10,7 +10,7 @@
 #
 
 class Tag < ApplicationRecord
-  validates :tag, presence: true
+  # validates :tag, presence: true
 
   has_many :taggings
 

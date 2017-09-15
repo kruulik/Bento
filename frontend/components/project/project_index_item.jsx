@@ -38,6 +38,7 @@ class ProjectIndexItem extends React.Component {
     likes = project.likes;
 
     if ( projectOwners.length > 1 ) {
+      // debugger
       ownerList = projectOwners.map((owner, idx) => {
         return (
         <div key={idx} className="owner">
@@ -60,7 +61,7 @@ class ProjectIndexItem extends React.Component {
 
         </div>
       );
-    } else {
+    } else if ( projectOwners.length === 1 ) {
       owners = <div className="owners">
         {projectOwners[0].f_name + " " + projectOwners[0].l_name}
       </div>;
@@ -76,7 +77,7 @@ class ProjectIndexItem extends React.Component {
             <div className="fields">
               <ul className="fields-list">
                 <li className="field">
-                  <span>{projectTags[0].tag}</span>
+                  {projectTags[0]? <span>{projectTags[0].tag}</span>: null}
                 </li>
               </ul>
             </div>

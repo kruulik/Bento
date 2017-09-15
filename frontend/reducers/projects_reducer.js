@@ -1,5 +1,6 @@
 import {
-  RECEIVE_PROJECTS
+  RECEIVE_PROJECTS,
+  RECEIVE_PROJECT
 } from '../actions/project_actions';
 import {
   LIKE,
@@ -20,6 +21,11 @@ const ProjectsReducer = (state = {}, action) => {
   switch (action.type) {
     case RECEIVE_PROJECTS:
       return merge({}, state, action.projects);
+
+    case RECEIVE_PROJECT:
+    debugger
+      return merge({}, state, {[action.project.id]: action.project});
+
     case REMOVE_COMMENT:
       nextState = merge({}, state);
       let removeComment = nextState[action.comment.project_id].comment_ids.indexOf(action.comment.id);

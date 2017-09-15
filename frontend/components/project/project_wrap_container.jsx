@@ -15,6 +15,7 @@ const mapStateToProps = (state, ownProps) => {
 };
 
 const mapDispatchToProps = dispatch => {
+  // debugger
   return {
     requestItems: projectId => dispatch(requestItems(projectId)),
     clearItems: () => dispatch(clearItems()),

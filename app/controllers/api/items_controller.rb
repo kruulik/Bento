@@ -11,8 +11,16 @@ class Api::ItemsController < ApplicationController
     end
   end
 
+  # def index
+  #   @items = Project.find(params[:project_id]).items
+  # end
+
   def index
-    @items = Project.find(params[:project_id]).items
+    if params[:project_id]
+      @items = Project.find(params[:project_id]).items
+    else
+      @items = Item.all
+    end
   end
 
   def destroy

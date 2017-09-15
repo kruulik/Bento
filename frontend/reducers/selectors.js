@@ -7,7 +7,11 @@ export const selectOwners = (state, project) => {
 };
 
 export const selectItems = (state, project) => {
-  return project.item_ids.map(id => state.items[id]);
+  if (project){
+    return project.item_ids.map(id => state.items[id]);
+  } else {
+
+  }
 };
 
 export const selectComments = (state, project) => {

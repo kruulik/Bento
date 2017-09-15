@@ -4,3 +4,11 @@ export const requestItems = (projectId) => {
     method: "GET"
   });
 };
+
+export const createItem = item => {
+  return $.ajax({
+    url: `/api/items`,
+    method: "POST",
+    data: { item }
+  });
+};

@@ -18,17 +18,16 @@ json.owners do
   end
 end
 
-
-# json.items do
-#   @projects.each do |project|
-#     project.items.each do |item|
-#       json.set! item.id do
-#         json.image_url asset_path(item.image.url)
-#         json.extract! item, :id, :body, :project_id
-#       end
-#     end
-#   end
-# end
+json.items do
+  @projects.each do |project|
+    project.items.each do |item|
+      json.set! item.id do
+        json.image_url asset_path(item.image.url(:medium))
+        json.extract! item, :id, :body 
+      end
+    end
+  end
+end
 
 json.tags do
   @projects.each do |project|

@@ -13,11 +13,10 @@ Rails.application.routes.draw do
 
     resources :owners, only: [:create, :show, :index]
     resources :comments, only: [:create, :destroy, :index]
-    resources :items, only: [:index, :show]
+    resources :items, only: [:index, :show, :create, :update, :destroy]
     resources :likes, only: [:create, :destroy]
     resources :tags, only: [:create, :destroy, :show, :index]
     resources :taggings, only: [:create, :destroy, :show, :index]
-
   end
 
   root "static_pages#root"

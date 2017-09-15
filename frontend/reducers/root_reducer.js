@@ -12,7 +12,8 @@ const rootReducer = combineReducers({
   users: UsersReducer,
   items: ItemsReducer,
   comments: CommentsReducer,
-  tags: TagReducer
+  tags: TagReducer,
+  editing: ProjectsReducer
 });
 
 export default rootReducer;
