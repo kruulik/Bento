@@ -1,18 +1,28 @@
-import { connect } from 'react-redux';
-import EditProject from './create_project';
+ import { connect } from 'react-redux';
+import EditProject from './edit_project';
 
 import { createProject } from '../../actions/project_actions';
-import { createItem, removeItem } from '../../actions/item_actions';
+import { createItem, deleteItem, editItem } from '../../actions/item_actions';
 import { selectItems } from '../../reducers/selectors';
 
 
 const mapStateToProps = (state, ownProps) =>  {
-  debugger
-  const project = ownProps.project;
-  if (!project) {
+  if (ownProps.project) {
+    const project = ownProps.project;
     return {
       projectItems: selectItems(state, project),
+      testState,
       state
+    };
+  } else {
+    const ownerId = state.session.currentUser.id;
+    return {
+      project:{
+        title: 'Untitled',
+        item_ids: [],
+        owner_id: ownerId,
+        state
+      }
     };
   }
 
@@ -20,7 +30,7 @@ const mapStateToProps = (state, ownProps) =>  {
 
 const mapDispatchToProps = dispatch => {
   return {
-    createProject: project => dispatch(createProject(project))
+    action: edit =>  dispatch(action(edit))
   };
 };
 

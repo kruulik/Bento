@@ -12,10 +12,11 @@ const mapStateToProps = (state, ownProps) => {
     projectItems: selectItems(state, project),
     state
   };
+
 };
 
 const mapDispatchToProps = dispatch => {
-  // debugger
+
   return {
     requestItems: projectId => dispatch(requestItems(projectId)),
     clearItems: () => dispatch(clearItems()),

@@ -1,5 +1,5 @@
 html {
-  background: #191919;
+  background: #f9f9f9;
 }
 
 * {
@@ -10,7 +10,10 @@ body {
   background: #f9f9f9;
   font-size: 14px;
   font-weight: normal;
-  min-height: calc(100vh - 60px);
+  // min-height: calc(100vh - 60px);
+  min-height: 100vh;
+  display: block;
+  // min-width: 100vw;
 }
 
 h1 {
@@ -40,8 +43,8 @@ a {
 }
 
 .site-content {
-  margin-top: 60px;
   padding: 50px;
+  width: 100%;
 }
 
 .project-gallery-container {

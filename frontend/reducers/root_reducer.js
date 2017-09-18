@@ -5,6 +5,7 @@ import UsersReducer from './users_reducer';
 import ItemsReducer from './items_reducer';
 import CommentsReducer from './comments_reducer';
 import TagReducer from './tag_reducer';
+import EditingReducer from './edit_reducer';
 
 const rootReducer = combineReducers({
   session: SessionReducer,
@@ -13,7 +14,7 @@ const rootReducer = combineReducers({
   items: ItemsReducer,
   comments: CommentsReducer,
   tags: TagReducer,
-  editing: ProjectsReducer
+  editing: EditingReducer,
 });
 
 export default rootReducer;

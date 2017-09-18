@@ -1,13 +1,9 @@
 import {
   RECEIVE_ITEMS,
-  RECEIVE_ITEM,
-  CLEAR_ITEMS
+  RECEIVE_ITEM
 } from '../actions/item_actions';
-import {
-  merge
-} from 'lodash';
 
-const ItemsReducer = (state = {}, action) => {
+const EditReducer = (state = {}, action) => {
   Object.freeze(state);
   switch (action.type) {
     case RECEIVE_ITEMS:
@@ -16,11 +12,9 @@ const ItemsReducer = (state = {}, action) => {
       return merge({}, state, {
         [action.item.id]: action.item
       });
-    case CLEAR_ITEMS:
-      return {};
     default:
       return state;
   }
 };
 
-export default ItemsReducer;
+export default EditReducer;

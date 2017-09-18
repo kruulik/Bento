@@ -6,8 +6,10 @@ class Discover extends React.Component {
 
   render () {
     return (
-      <div className="discover-container">
-        <ProjectsIndexContainer />
+      <div className="site-content">
+        <div className="discover-container">
+          <ProjectsIndexContainer />
+        </div>
       </div>
     );
   }
